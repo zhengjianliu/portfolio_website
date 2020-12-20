@@ -14,11 +14,28 @@
   margin-left: .5%;
   margin-right: .5%;
   border-radius: 15px;
-  z-index: 1;
+  z-index: 100;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
   transition: .5s;
+}
+
+.hamburger li:nth-child(1){
+  background-color: white;
+  width: 15px;
+}
+
+.hamburger li:nth-child(2){
+  background-color: rgb(0, 158, 217);
+
+}
+
+.hamburger li:nth-child(3){
+  background-color: rgb(0, 0, 0);
+  width: 15px;
+  height: 4px;
+
 }
 .items{
   display: flex;
@@ -120,31 +137,33 @@ li{
   }
   .navbar li a{
     transition: 0.4s;
+    color: rgb(87, 87, 87);
   }
 
   .navbar.active li a:hover{
     letter-spacing: 10px;
     padding-left: 3vw;
+    color: black;
     transition: .4s;
   }
 
   .navbar.active li:nth-child(1){
-    transition: all .4s ease 0.1s;
+    transition: all .4s ease 0s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(2){
-    transition: all 0.4s ease 0.2s;
+    transition: all 0.4s ease 0.1s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(3){
-    transition: all 0.4s ease 0.3s;
+    transition: all 0.4s ease 0.2s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(4){
-    transition: all 0.4s ease 0.4s;
+    transition: all 0.4s ease 0.3s;
     transform: translateY(0%) scale(1);
   }
 

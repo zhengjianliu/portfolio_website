@@ -111,10 +111,34 @@ html{
   width: 40px;
 }
 
+.learnmore{
+  width: auto;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 0.7em;
+  height: 50px;
+  background-color:rgb(0, 158, 217);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.learnmore:hover{
+  background-color:rgb(0, 128, 176);
+}
+
+.arrow{
+  transition: 1s;
+}
+.learnmore:hover .arrow{
+  color: white;
+}
+
+
 #about{
   background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
   z-index: 20;
-  position: absolute;
+  position: static;
 }
 
 #projects{
