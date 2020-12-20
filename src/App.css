@@ -29,7 +29,6 @@ body::-webkit-scrollbar-thumb {
 
 .App {
   text-align: center;
-  background-color: rgb(36, 42, 74);
 }
 html{
   scroll-behavior: smooth;
@@ -38,18 +37,84 @@ html{
 .fullpage{
   height: 100vh;
   width:100%;
-  padding-top:100px;
 }
-
-
 
 
 #home{
+  background-color: rgb(50, 50, 50);
+}
+
+.positionbg{
+  padding-left: 2vw;
+  font-size: 23em;
+  position: fixed;
+  z-index: 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .02);
+  text-align: left;
 
 }
 
+.intro{
+  font-family: georgia;
+  text-align: left;
+  font-size: 2.5em;
+  line-height: 1.3;
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+}
+
+.intro h1{
+  color: white;
+}
+.intro h1 span{
+  color: rgb(0, 158, 217);
+}
+
+.intro h2{
+  font-size: 2.1em;
+  color: rgb(164, 164, 164);
+}
+
+.intro h2 span{
+  color: rgb(0, 158, 217);
+}
+
+.intro p{
+  font-size: 0.6em;
+  width: 80%;
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+.infobox{
+  height: 100vh;
+  width: 60px;
+  background-color: white;
+  top: 0;
+  right:20px;
+  position: absolute;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.infobox div{
+  bottom: 5vh;
+  position: absolute;
+}
+
+.infobox a img{
+  margin-top: 30px;
+  width: 40px;
+}
+
 #about{
-background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+  background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+  z-index: 20;
+  position: absolute;
 }
 
 #projects{
@@ -58,4 +123,17 @@ background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-re
 
 #contact{
 
+}
+
+
+@media only screen and (max-width: 880px){
+  .positionbg{
+    font-size: 15em;
+  }
+  .intro h1,.intro h2{
+    font-size: 1.2em;
+  }
+  .intro p{
+    font-size: 0.4em;
+  }
 }

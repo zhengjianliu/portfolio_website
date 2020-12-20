@@ -1,7 +1,7 @@
 /* Navbar */
 .navbarcontainer{
   position: sticky;
-  top: 0;
+  top: 0px;
 }
 .navbar{
   position: absolute;
@@ -9,7 +9,11 @@
   justify-content: space-between;
   height: 60px;
   background: white;
-  width: 100%;
+  width: 99%;
+  margin-top: 10px;
+  margin-left: .5%;
+  margin-right: .5%;
+  border-radius: 15px;
   z-index: 1;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(255, 255, 255, 0.15);
@@ -19,7 +23,7 @@
 .items{
   display: flex;
   margin: 0;
-  width: 70%;
+  width: 60%;
   height: 50px;
   padding-top: 15px;
   list-style-type: none;
@@ -94,6 +98,9 @@ li{
   }
 
   .navbar.active{
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
     height: 100vh;
   }
 

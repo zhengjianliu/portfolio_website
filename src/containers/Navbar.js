@@ -14,7 +14,7 @@ class Navbar extends Component{
       <div className="navbarcontainer" >
         <div className={this.state.open?"navbar":"navbar active"}>
           <ul className="items" onClick={this.clickHandler}>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
