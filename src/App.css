@@ -114,6 +114,22 @@ html{
   color: rgb(0, 158, 217);
 }
 
+.intro h2 span b{
+  color: white;
+  opacity: 0;
+  animation: typing 1s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes typing{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 .infobox{
   height: 100vh;
   width: 60px;
@@ -192,9 +208,9 @@ html{
 @media only screen and (max-width: 880px){
   .pagemark{
     position: sticky;
-    top: 20px;
+    top: 0;
     width: 100px;
-    padding-top: 0vh;
+    padding-top: 20px;
     font-size: 2em;
     margin:0;
     padding-left: 30px;
