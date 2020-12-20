@@ -48,13 +48,15 @@ html{
 
 .positionbg{
   padding-left: 2vw;
-  font-size: 23em;
-  position: fixed;
+  font-size: 17em;
+  top: 0;
+  left: 0;
+  position: static;
+  overflow:hidden;
   z-index: 0;
   font-weight: 700;
   color: rgba(255, 255, 255, .02);
   text-align: left;
-
 }
 
 .intro{
@@ -104,7 +106,7 @@ html{
 }
 
 .intro h2{
-  font-size: 2.1em;
+  font-size: 1.7em;
   color: rgb(164, 164, 164);
 }
 
@@ -175,11 +177,42 @@ html{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 #about{
-  background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+  background: white;
   z-index: 20;
   position: static;
+
 }
+
+
+#about p{
+  font-size: 1.1em;
+  width: 50%;
+  line-height: 1.4;
+  font-weight: bold;
+  text-align: left;
+  text-align: justify;
+  text-align: "." start;
+  padding: 20px;
+}
+
+
+
+
+
+
 
 #projects{
 
@@ -217,13 +250,17 @@ html{
     z-index: 100;
   }
   .positionbg{
-    font-size: 15em;
+    font-size: 13em;
   }
   .intro{
     top: 10vh;
   }
-  .intro h1,.intro h2{
+  .intro h1{
     font-size: 1.2em;
+    line-height: 1.6;
+  }
+  .intro h2{
+    font-size: 1em;
     line-height: 1.6;
   }
 }

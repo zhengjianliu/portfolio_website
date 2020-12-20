@@ -4,7 +4,8 @@ import Github from '../images/github.png'
 
 class Home extends Component{
   state={
-    position:"full-stack web developer",
+    titles:["full-stack web developer","problem solver","software developer"],
+    target:0,
     letters:-1,
     count:-1,
     typing:"",
@@ -12,32 +13,50 @@ class Home extends Component{
 
 
   typing = () =>{
-    this.myinterval = setInterval (()=>{
+    this.typingscript = setInterval(()=>{
       this.setState({count:this.state.count+1,letters:this.state.letters+1})
-      this.setState({typing:this.state.position.substr(0,this.state.count)})
-    },150)
-
+      this.setState({typing:this.state.titles[this.state.target].substr(0,this.state.count)})
+      if(this.state.titles[this.state.target].length===this.state.count){
+        this.checkTyping()
+      }
+    },200)
   }
 
-  deleteing = () =>{
-    this.backinterval = setInterval(()=>{
+  deleting = () =>{
+    this.deletingscript = setInterval(()=>{
       this.setState({letters:this.state.letters-1})
-      this.setState({typing:this.state.position.substr(0,this.state.letters)})
-    },100)
+      this.setState({typing:this.state.titles[this.state.target].substr(0,this.state.letters)})
+      if(this.state.letters===-1){
+        this.afterDeleting()
+      }
+    },50)
+  }
+
+  checkTyping = ()=>{
+    clearInterval(this.typingscript)
+    setTimeout(()=>{
+      this.deleting()
+    },3000)
+  }
+
+  afterDeleting = () =>{
+    clearInterval(this.deletingscript)
+    this.setState({count:0})
+    if(this.state.titles.length===this.state.target+1){
+      this.setState({target:0})
+    }else{
+      this.setState({target:this.state.target+1})
+    }
+    this.typing()
   }
 
   componentDidMount(){
     this.typing()
-    if(this.state.position.length === this.state.count){
-      clearInterval(this.myinterval)
-    }
   }
 
   render(){
-    console.log(this.state)
     return(
       <div id="home" className="fullpage">
-        {this.state.position.substr(0,10)}
         <div className="positionbg">Full-Stack<br/>Web Developer</div>
         <div className="intro">
           <h1>Hey there,<br/><span>I'm Zhengjian Liu.</span><br/>Nice to meet ya!</h1>

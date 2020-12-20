@@ -23,7 +23,7 @@ class App extends Component{
     return (
       <div className="App">
         <Home closeHandler={this.closeHandler}/>
-        <Navbar open={this.state.open} clickHandler={this.clickHandler}/>
+        <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
         <About open={this.state.open} />
         <Projects open={this.state.open}/>
         <Contact open={this.state.open}/>
