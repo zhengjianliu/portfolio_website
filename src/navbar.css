@@ -137,7 +137,7 @@ li{
   }
   .navbar li a{
     transition: 0.4s;
-    color: rgb(87, 87, 87);
+    color: rgba(87, 80, 80,0.8);
   }
 
   .navbar.active li a:hover{
@@ -148,22 +148,22 @@ li{
   }
 
   .navbar.active li:nth-child(1){
-    transition: all .4s ease 0s;
+    transition: all .3s ease 0s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(2){
-    transition: all 0.4s ease 0.1s;
+    transition: all 0.3s ease 0.1s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(3){
-    transition: all 0.4s ease 0.2s;
+    transition: all 0.3s ease 0.2s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(4){
-    transition: all 0.4s ease 0.3s;
+    transition: all 0.3s ease 0.3s;
     transform: translateY(0%) scale(1);
   }
 

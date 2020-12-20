@@ -4,7 +4,7 @@ class Projects extends Component{
   render(){
     return(
       <div id="projects" className="fullpage">
-        <h1>Projects</h1>
+        <h1 className={this.props.open?"pagemark":"pagemark remove"}>Projects</h1>
       </div>
     )
   }

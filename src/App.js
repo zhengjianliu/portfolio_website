@@ -7,14 +7,26 @@ import Contact from './containers/Contact'
 import Navbar from './containers/Navbar'
 
 class App extends Component{
+  state={
+    open: true,
+  }
+
+  clickHandler = () =>{
+    this.setState({open:!this.state.open})
+  }
+
+  closeHandler = () =>{
+    this.setState({open:true})
+  }
+
   render(){
     return (
       <div className="App">
-        <Home/>
-        <Navbar/>
-        <About/>
-        <Projects/>
-        <Contact/>
+        <Home closeHandler={this.closeHandler}/>
+        <Navbar open={this.state.open} clickHandler={this.clickHandler}/>
+        <About open={this.state.open} />
+        <Projects open={this.state.open}/>
+        <Contact open={this.state.open}/>
       </div>
     )
   }
