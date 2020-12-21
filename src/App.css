@@ -236,6 +236,11 @@ html{
   background: lightgrey;
 }
 
+#footer{
+  height: 50px;
+  background: orange;
+}
+
 .pagemark{
   text-align: left;
   margin-left: 5vw;
@@ -270,11 +275,11 @@ html{
     top: 10vh;
   }
   .intro h1{
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.6;
   }
   .intro h2{
-    font-size: 0.8em;
+    font-size: 0.85em;
     line-height: 1.6;
   }
 }

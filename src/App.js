@@ -5,7 +5,7 @@ import About from './containers/About'
 import Projects from './containers/Projects'
 import Contact from './containers/Contact'
 import Navbar from './containers/Navbar'
-
+import Footer from './containers/Footer'
 
 class App extends Component{
   state={
@@ -28,6 +28,7 @@ class App extends Component{
         <About open={this.state.open} />
         <Projects open={this.state.open}/>
         <Contact open={this.state.open}/>
+        <Footer/>
       </div>
     )
   }
