@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import Linkedin from '../images/linkedin.png'
 import Github from '../images/github.png'
-
+import Medium from '../images/medium.png'
+import Email from '../images/email.png'
 class Navbar extends Component{
 
   render(){
@@ -14,9 +15,11 @@ class Navbar extends Component{
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <div className="info">
-            <a href="www.google.com"><img src={Linkedin}/></a>
-            <a><img src={Github}/></a>
+          <div className={this.props.open?"info":"info active"}>
+            <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank"><img src={Linkedin}/></a>
+            <a href="https://github.com/zhengjianliu" target="_blank"><img src={Github}/></a>
+            <a href="https://medium.com/@comezheng" target="_blank"><img src={Medium}/></a>
+            <a href="mailto:comezheng@gmail.com"><img src={Email}/></a>
           </div>
           <div className={this.props.open?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>

@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import Linkedin from '../images/linkedin.png'
 import Github from '../images/github.png'
-
+import Medium from '../images/medium.png'
+import Email from '../images/email.png'
 class Home extends Component{
   state={
     titles:["full-stack web developer","problem solver","software developer"],
@@ -65,8 +66,10 @@ class Home extends Component{
       </div>
         <div className="infobox">
           <div>
-            <a><img src={Linkedin}/></a>
-            <a><img src={Github}/></a>
+            <a className="email" href="mailto:comezheng@gmail.com"><img src={Email}/></a>
+            <a href="https://medium.com/@comezheng" target="_blank"><img src={Medium}/></a>
+            <a href="https://github.com/zhengjianliu" target="_blank"><img src={Github}/></a>
+            <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank"><img src={Linkedin}/></a>
           </div>
         </div>
       </div>

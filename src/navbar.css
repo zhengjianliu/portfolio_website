@@ -63,10 +63,12 @@ li{
 }
 
 .info{
-  margin-right: 15vw;
+  width: 30%;
+  transition: 1s;
 }
 
 .info a img{
+  transition: 1s;
   width: 40px;
   padding-top:10px;
   margin-left: 15px;
@@ -88,6 +90,19 @@ li{
     transform: scale(1);
     transition: 0.5s;
   } */
+
+  .info.active{
+    width: 100%;
+    padding-right: 20px;
+    transition: 1s;
+  }
+
+  .info.active a img{
+    width: 50px;
+    padding-top: 40px;
+    margin-left: 40px;
+    transition: 1s;
+  }
 
   .items{
     width: 0px;
@@ -131,7 +146,7 @@ li{
     justify-content: center;
     align-items: center;
     margin:0;
-    font-size: 50pt;
+    font-size: 40pt;
     transform: translateY(-100%) scale(0);
     margin-top: 12vh;
   }
@@ -141,7 +156,7 @@ li{
   }
 
   .navbar.active li a:hover{
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     padding-left: 3vw;
     color: black;
     transition: .4s;
