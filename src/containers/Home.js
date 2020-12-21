@@ -19,7 +19,7 @@ class Home extends Component{
       if(this.state.titles[this.state.target].length===this.state.count){
         this.checkTyping()
       }
-    },200)
+    },100)
   }
 
   deleting = () =>{

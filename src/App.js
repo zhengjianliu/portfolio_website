@@ -6,6 +6,7 @@ import Projects from './containers/Projects'
 import Contact from './containers/Contact'
 import Navbar from './containers/Navbar'
 
+
 class App extends Component{
   state={
     open: true,
