@@ -63,15 +63,15 @@ li{
 }
 
 .info{
-  width: 30%;
-  transition: 1s;
+  margin-right: 10%;
+  transition: .5s;
 }
 
 .info a img{
-  transition: 1s;
   width: 40px;
   padding-top:10px;
   margin-left: 15px;
+  transition: .5s;
 }
 
 
@@ -92,15 +92,14 @@ li{
   } */
 
   .info.active{
-    width: 100%;
-    padding-right: 20px;
+    margin-right: 100px;
     transition: 1s;
   }
 
   .info.active a img{
-    width: 50px;
-    padding-top: 40px;
-    margin-left: 40px;
+    width: 45px;
+    padding-top: 25px;
+    margin-left: 35px;
     transition: 1s;
   }
 
