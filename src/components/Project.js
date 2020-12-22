@@ -6,7 +6,10 @@ class Projects extends Component {
       <div className="container">
         <img src={this.props.image} alt={this.props.alt} className="image"/>
         <div className="overlay">
-          <div className="text"><b>Project Name:</b> {this.props.desp}</div>
+          <div className="text"><b>Project Name:</b> {this.props.desp}
+            <br/>
+            <span className="hiddentext">now you see me</span>
+          </div>
         </div>
       </div>
     </div>)

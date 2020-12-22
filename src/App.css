@@ -34,8 +34,10 @@ html{
 }
 
 .fullpage{
-  height: 100vh;
+  height: auto;
   width:100%;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
 
@@ -238,9 +240,9 @@ html{
 .aboutright img{
   max-width: 400px;
   background: green;
-  width: 60%;
+  width: 80%;
   border-radius: 20px;
-  margin:20%;
+  margin:10%;
   margin-top: 5vh;
   transition: .5s;
 }
@@ -487,6 +489,6 @@ html{
     width: 100%;
   }
   .aboutright img{
-    max-width: 200px;
+    max-width: 300px;
   }
 }
