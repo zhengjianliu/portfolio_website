@@ -26,7 +26,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 } */
 
-
 .App {
   text-align: center;
 }
@@ -35,10 +34,8 @@ html{
 }
 
 .fullpage{
-  height: auto;
+  height: 100vh;
   width:100%;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 
@@ -284,15 +281,90 @@ html{
   background: slategrey;
 }
 
+.projectcontainer{
+
+  width: 90%;
+  margin: 5%;
+}
+
 .project{
-  font-size: 100pt;
-  margin:0;
-  padding: 0;
+  height: auto;
+  width: 30%;
+  margin: 1.5%;
+  background-color: orange;
+  float: left;
+  border-radius: 10px;
+  transition: .5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.project:hover{
+  transform: scale(1.02);
 }
 
 
+.container {
+  position: relative;
+  object-fit: contain;
+  height: 100%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color:rgb(0, 158, 217);
+  overflow: hidden;
+  width: 100%;
+  height: 25%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: .5s ease;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.container:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.viewmore{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+}
+.viewmorebutton{
+  font-size: 40px;
+}
+@media only screen and (max-width: 880px){
+  .project{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5%;
+    height: 300px;
+  }
+}
 
 
 
@@ -370,11 +442,11 @@ html{
   .pagemark{
     position: sticky;
     top: 0;
+    left: 30px;
     width: 100px;
     padding-top: 20px;
     font-size: 2em;
     margin:0;
-    padding-left: 30px;
     z-index: 100;
   }
   .positionbg{
