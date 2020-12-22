@@ -3,6 +3,8 @@ import Linkedin from '../images/linkedin.png'
 import Github from '../images/github.png'
 import Medium from '../images/medium.png'
 import Email from '../images/email.png'
+import Arrow from '../images/arrow1.png'
+
 class Home extends Component{
   state={
     titles:["full-stack web developer","problem solver","software developer"],
@@ -62,7 +64,7 @@ class Home extends Component{
         <div className="intro">
           <h1>Hey there,<br/><span>I'm Zhengjian Liu.</span><br/>Nice to meet ya!</h1>
           <h2>I'm a <br/><span>{this.state.typing}<b>|</b></span></h2>
-          <a className="learnmore" href="#about" onClick={this.props.closeHandler}>Learn more <span className="arrow">{"➤"}</span></a>
+          <a href="#about" onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></a>
       </div>
         <div className="infobox">
           <div>

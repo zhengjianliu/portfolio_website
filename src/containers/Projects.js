@@ -6,8 +6,14 @@ class Projects extends Component{
     return(
       <div id="projects" className="fullpage">
         <h1 className={this.props.open?"pagemark":"pagemark remove"}>Projects</h1>
-        <div className="projectcontainer">
-        </div>
+        <Project/>
+        <Project/>
+        <Project/>
+        <Project/>
+
+      <Project/>
+      <Project/>
+      
 
       </div>
     )

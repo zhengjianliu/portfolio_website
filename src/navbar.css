@@ -70,15 +70,15 @@ li{
   width: 40px;
   padding-top:10px;
   margin-left: 15px;
-  transition: .5s;
+  transition: 1s;
 }
 
 
 
-@media only screen and (max-width: 980px){
+@media only screen and (max-width: 880px){
   .info{
-    width: auto;
-    margin-right: 70px;
+    width: 250px;
+    padding-right: 10px;
   }
 
   .navbar .items li:nth-child(n+1){
@@ -91,14 +91,16 @@ li{
   } */
 
   .info.active{
-    margin-right: 100px;
+    width: 100%;
+    margin-right: 0px;
     transition: 1s;
   }
 
   .info.active a img{
-    width: 45px;
-    padding-top: 25px;
-    margin-left: 35px;
+    width: 10%;
+    max-width: 55px;
+    padding-top: 3vh;
+    margin-right: 10%;
     transition: 1s;
   }
 
@@ -107,7 +109,6 @@ li{
     padding-left:0;
     padding-right: 0;
     margin-right: 0;
-    margin-left: 10vw;
   }
 
   .hamburger{
@@ -147,6 +148,7 @@ li{
     font-size: 40pt;
     transform: translateY(-100%) scale(0);
     margin-top: 12vh;
+    padding-left: 10vw;
   }
   .navbar li a{
     transition: 0.4s;
