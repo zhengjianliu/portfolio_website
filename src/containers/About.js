@@ -6,9 +6,11 @@ import Redux from '../images/redux.png'
 import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
+import Typewriter from '../components/Typewriter'
 
 class About extends Component{
   render(){
+    var greeting = ["Hi, nice to meet ya!","Welcome to my website."]
     return(
       <div id="about" className="fullpage">
         <h1 className={this.props.open?"pagemark":"pagemark remove"}>About</h1>
@@ -37,6 +39,7 @@ class About extends Component{
 
           <div className="aboutright">
             <img src={Affinity} alt="selfie"/>
+            <Typewriter titles={greeting}/>
           </div>
         </div>
       </div>

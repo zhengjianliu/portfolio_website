@@ -168,7 +168,7 @@ html{
   color: rgb(0, 158, 217);
 }
 
-.intro h2 span b{
+.typerwriter{
   color: white;
   opacity: 0;
   animation: typing 1s linear;
