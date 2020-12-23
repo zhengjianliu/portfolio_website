@@ -20,6 +20,16 @@
   transition: .5s;
 }
 
+.navbar li a{
+  transition: 0.4s;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar li a:hover{
+  transition: 0.4s;
+  color: rgba(0, 0, 0, 1);
+}
+
 .hamburger li:nth-child(1){
   background-color: white;
   width: 15px;
@@ -43,6 +53,7 @@
   height: 50px;
   padding-top: 15px;
   list-style-type: none;
+
 }
 li{
   list-style-type: none;
@@ -153,13 +164,13 @@ li{
   }
   .navbar li a{
     transition: 0.4s;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
   }
 
   .navbar.active li a:hover{
     letter-spacing: 5px;
     padding-left: 3vw;
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
     transition: .4s;
   }
 

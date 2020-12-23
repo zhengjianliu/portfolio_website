@@ -8,6 +8,7 @@
 body::-webkit-scrollbar {
     width: 0px;
 }
+
 :root{ scrollbar-width: none !important }
 
 a{
@@ -28,6 +29,7 @@ body::-webkit-scrollbar-thumb {
 
 .App {
   text-align: center;
+
 }
 html{
   scroll-behavior: smooth;
@@ -36,9 +38,9 @@ html{
 .fullpage{
   width:100%;
   height: auto;
-  min-height: 100vh;
+  min-height: 60vh;
   overflow:hidden;
-
+  background-color: rgb(50, 50, 50);
 }
 
 .wholeapp{
@@ -94,14 +96,13 @@ html{
 
 
 #home{
-  background-color: rgb(50, 50, 50);
+  min-height: 100vh;
   max-height: 100vh;
 }
 
 .positionbg{
   padding-left: 2vw;
   font-size: 17em;
-  top: 0;
   left: 0;
   position: static;
   overflow:hidden;
@@ -109,6 +110,7 @@ html{
   font-weight: 700;
   color: rgba(255, 255, 255, .02);
   text-align: left;
+  filter: blur(5px);
 }
 
 .intro{
@@ -117,7 +119,7 @@ html{
   font-size: 2.5em;
   line-height: 1.3;
   position: absolute;
-  top: 5vh;
+  top: 10vh;
   left: 5vw;
 }
 
@@ -158,7 +160,7 @@ html{
 }
 
 .intro h2{
-  font-size: 1.7em;
+  font-size: 2em;
   color: rgb(164, 164, 164);
 }
 
@@ -240,7 +242,6 @@ html{
 
 
 #about{
-  background: white;
   z-index: 20;
   position: static;
 }
@@ -257,21 +258,27 @@ html{
 }
 
 .aboutleft{
-  width: 40%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5vh;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  max-width: 800px;
 }
 
 .aboutleft p{
+  color: rgba(255, 255, 255, 0.8);
   padding: 0;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.5;
   font-weight: 500;
   text-align: left;
-  text-align: justify;
   text-align: "." start;
+}
+
+.aboutleft p b{
+  text-align: left;
+  font-size: 1.5em;
 }
 
 
@@ -325,8 +332,9 @@ html{
 }
 
 .projectcontainer{
-  width: 90%;
-  margin: 5%;
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
   margin-top: 2%;
 }
 
@@ -352,7 +360,7 @@ html{
   height: 100%;
   opacity: 1;
 }
-
+/*
 .links{
   display: block;
   position: absolute;
@@ -378,7 +386,7 @@ html{
   margin-bottom: 2%;
   transition: .5s;
   cursor: pointer;
-}
+} */
 
 .fulllinks{
   display: block;
@@ -401,9 +409,9 @@ html{
 }
 
 .fulllinks p{
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
-  color: rgb(50, 50, 50);
+  color: rgb(0, 0, 0);
   margin: 5px;
   font-weight: 700;
   border-radius: 30px;
@@ -419,7 +427,7 @@ html{
 .container:hover .fulllinks{
   opacity: 1;
   box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.2);
-  transform: translateY(0);
+  transform: translateY(-5px);
 }
 
 .overlay {
@@ -440,6 +448,7 @@ html{
 
 .container:hover .overlay{
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .text {
@@ -469,7 +478,7 @@ html{
 
 
 
-.container:hover .links{
+/* .container:hover .links{
   width: 40px;
   bottom: 2%;
   right: -100px;
@@ -480,7 +489,7 @@ html{
 
 .container:hover .links img{
   transition: .5s;
-}
+} */
 
 .container:hover .text{
   align-items: center;
@@ -515,7 +524,7 @@ html{
   bottom: 10px;
   display: flex;
   justify-content: center;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 700;
 }
 
@@ -526,6 +535,29 @@ html{
   padding: 1px 10px;
   border-radius: 20px;
 }
+.viewmorebutton{
+  justify-content: center;
+  align-items: center;
+  margin:1.5%;
+  padding: 10px 60px;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 2% 20%;
+  border-radius:10px;
+  letter-spacing: 3px;
+  border:3px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+.viewmorebutton:hover{
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+}
+
+
+
 
 
 
@@ -551,25 +583,27 @@ html{
 
 
 #contact{
-
-  height: 50vh;
+  background-color: rgb(50, 50, 50);
+  height: 70vh;
+  z-index: 200;
 }
 
 .contactcontainer{
-  margin-top: 10vh;
   width: 100%;
+  padding-top: 15vh;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
 .contactcontainer h1{
+  margin-top: 0;
   font-size: 3.5em;
   margin-bottom: 20px;
 }
 
 .contactcontainer p{
-  color:rgb(78, 78, 78);
+  color:white;
   font-size: 1.4em;
   margin-bottom: 50px;
 }
@@ -593,7 +627,7 @@ html{
 
 
 hr{
-  border:1px solid rgb(78, 78, 78);
+  border:1px solid white;
   width: 188px;
 }
 
@@ -630,10 +664,10 @@ hr{
 
 
 .pagemark{
+  color:rgb(0, 158, 217);
   text-align: left;
-  margin-left: 5vw;
   height: 50px;
-  padding-top: 10vh;
+  padding-top: 15vh;
   margin-top: 0;
   font-size: 2.5em;
   transition: .3s;
@@ -665,7 +699,7 @@ hr{
     font-size: 13em;
   }
   .intro{
-    top: 10vh;
+    top: 20vh;
   }
   .intro h1{
     font-size: 1.1em;
@@ -692,7 +726,7 @@ hr{
     max-width: 50px;
   }
   .aboutleft p{
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.4;
   }
   .aboutright{
@@ -702,15 +736,22 @@ hr{
     max-width: 300px;
   }
 
-
-  .contactcontainer{
-    margin-top: 20vh;
-  }
   .project{
     width: 100%;
     margin: 0;
     margin-bottom: 5%;
     height: 300px;
+  }
+
+  .projectcontainer{
+    width: 80%;
+    margin: 10%;
+  }
+
+  .contactcontainer{
+    padding-top: 15vh;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -723,7 +764,4 @@ hr{
     height: 300px;
   }
 
-  .contactcontainer{
-    margin-top: 10vh;
-  }
 }

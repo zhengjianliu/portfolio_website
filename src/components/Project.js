@@ -17,10 +17,10 @@ class Projects extends Component {
         <div className="project">
         <div className="container">
           <img src={this.props.image} alt={this.props.alt} className="image"/>
-          <div className="links">
+          {/*<div className="links">
             <img src={Externallink} alt="Demo"/>
             <img src={Sourcecode} alt="Source Code"/>
-          </div>
+          </div>*/}
           <div className="fulllinks">
             <p>Live Demo</p>
             <p>Video</p>

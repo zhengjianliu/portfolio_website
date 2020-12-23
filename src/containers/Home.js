@@ -8,13 +8,13 @@ import Typewriter from '../components/Typewriter'
 
 class Home extends Component{
   render(){
-    var titles = ['full-stack developer', 'problem solver 🤔'];
+    var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
         <div className="positionbg">Full-Stack<br/>Web Developer</div>
         <div className="intro">
-          <h1>👋 Hey there,<br/><span>I'm Zhengjian Liu.</span><br/>Nice to meet ya!</h1>
-          <h2>I'm a <br/><span><Typewriter titles={titles}/></span></h2>
+          <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu.</span></h1>
+          <h2>I'm a <span><Typewriter titles={titles}/></span></h2>
           <a href="#about" onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></a>
       </div>
         <div className="infobox">
