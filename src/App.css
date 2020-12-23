@@ -76,6 +76,7 @@ html{
   width: 100%;
   position: fixed;
   z-index: 1000;
+  letter-spacing: 2px;
 }
 .base{
   background-color: rgb(0, 158, 217);

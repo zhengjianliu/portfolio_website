@@ -10,7 +10,7 @@ class Loading extends Component{
     this.loaderscript = setInterval(()=>{
       this.setState({percentage:this.state.percentage+1})
       this.checkloader()
-    },25)
+    },22)
   }
 
   checkloader=()=>{
@@ -36,7 +36,7 @@ class Loading extends Component{
           points: 4,
         }}/>
         </div>
-        <h1>Loading... {parseInt(this.state.percentage)}%</h1>
+        <h1>{parseInt(this.state.percentage)}% Loading... 🏃</h1>
         <div className="base" style={ { height: `${ this.state.percentage }vh` } }></div>
         </div>
     )
