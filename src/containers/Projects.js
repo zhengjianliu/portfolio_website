@@ -11,12 +11,41 @@ class Projects extends Component {
           ? "pagemark"
           : "pagemark remove"}>Projects</h1>
       <div className="projectcontainer">
-        <Project image={image} alt={"project image"} desp={"Zip Trade"}/>
-        <Project image={image} alt={"project image"} desp={"BestBey"}/>
-        <Project image={image} alt={"project image"} desp={"YouPlay"}/>
-        <Project image={image} alt={"project image"} desp={"Portfolio Website"}/>
-        <Project image={image} alt={"project image"} desp={"Portfolio Website"}/>
-        <Project image={image} alt={"project image"} desp={"Portfolio Website"}/>
+        <Project
+          image={image}
+          alt={"project image"}
+          name={"Zip Trade"}
+          tags={['ReactJS','Redux','ROR',]}
+          desp="The second-hand marketing app provides a connection for sellers and buyers living in the same postal area."
+          />
+        <Project
+          image={image}
+          alt={"project image"}
+          name={"BestBey"}
+          tags={['ReactJS','Redux','ROR']}
+          desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+          />
+        <Project
+          image={image}
+          alt={"project image"}
+          name={"YouPlay"}
+          tags={['ROR','Affinity']}
+          desp="Ruby on Rails full stack application that allows users to search, view, comment on videos online"
+          />
+        <Project
+          image={image}
+          alt={"project image"}
+          name={"TikTok Clone"}
+          tags={['Vanilla JS','ROR','Affinity']}
+          desp="The web version of TikTok uses YouTube API to generate video feed and provides a user experience similar to TikTok"
+            />
+            <Project
+              image={image}
+              alt={"project image"}
+              name={"Portfolio Website"}
+              tags={['ReactJS','Affinity']}
+              desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+                />
       </div>
 
     </div>)

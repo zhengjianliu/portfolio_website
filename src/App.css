@@ -34,10 +34,11 @@ html{
 }
 
 .fullpage{
-  height: auto;
   width:100%;
-  overflow: hidden;
+  height: auto;
   min-height: 100vh;
+  overflow:hidden;
+
 }
 
 
@@ -284,26 +285,20 @@ html{
 }
 
 .projectcontainer{
-
   width: 90%;
   margin: 5%;
+  margin-top: 2%;
 }
 
 .project{
   height: auto;
-  width: 30%;
-  margin: 1.5%;
-  background-color: orange;
+  width: 48%;
+  margin: 1%;
   float: left;
   border-radius: 10px;
-  transition: .5s;
+  /* transition: .5s; */
   overflow: hidden;
-  cursor: pointer;
 }
-.project:hover{
-  transform: scale(1.02);
-}
-
 
 .container {
   position: relative;
@@ -315,6 +310,76 @@ html{
   display: block;
   width: 100%;
   height: 100%;
+  opacity: 1;
+}
+
+.links{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  height: 21%;
+  width: 35px;
+  padding: 10px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:10px;
+  box-shadow: -5px 1px 10px 0px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  transition: .5s;
+}
+
+
+.links img{
+  height: 46%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.fulllinks{
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 5px 2.5%;
+  border-radius: 10px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(80px);
+}
+
+.fulllinks p{
+  font-size: 1.2em;
+  margin: 0;
+  color: rgb(50, 50, 50);
+  margin: 5px;
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 0 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.fulllinks p:hover{
+  background-color: rgba(255, 255, 255, 0.67);
+}
+
+.container:hover .fulllinks{
+  opacity: 1;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
 }
 
 .overlay {
@@ -325,16 +390,15 @@ html{
   background-color:rgb(0, 158, 217);
   overflow: hidden;
   width: 100%;
-  height: 25%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: .5s ease;
+  height: 28%;
+  border-radius: 10px;
+  transition: .3s ease;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
 }
 
-.container:hover .overlay {
+.container:hover .overlay{
   height: 100%;
 }
 
@@ -343,21 +407,94 @@ html{
   color: white;
   font-size: 20px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  transition: 1s;
+}
+.text img{
+  width: 40px;
+  height: 15px;
+  opacity: 1;
+  transition: 1s ease;
 }
 
-.viewmore{
-  width: 100%;
-  height: 100px;
-  position: absolute;
+.container:hover .text img{
+  transform: scale(0.5) translateY(-200px);
+  opacity: 0;
 }
-.viewmorebutton{
-  font-size: 40px;
+
+
+
+.container:hover .links{
+  width: 40px;
+  bottom: 2%;
+  right: -100px;
+  height: 25%;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.container:hover .links img{
+  transition: .5s;
+}
+
+.container:hover .text{
+  align-items: center;
+}
+
+.desp{
+  height: 0;
+  opacity: 0;
+  font-size: 0.8em;
+  font-weight: 500;
+  transform: scaleX(0) translateY(50px);
+  transition: .5s ease;
+  width: 80%;
+  margin:0 10%;
+}
+
+.container:hover .desp{
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 1;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  transform: scaleY(1) translateY(0px);
+}
+
+
+
+
+.pills{
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.pill{
+  background: rgb(0, 158, 217);
+  margin: 0px 10px;
+  margin-top: 5px;
+  padding: 1px 10px;
+  border-radius: 20px;
+}
+
+
+@media only screen and (min-width: 1500px){
+  .project{
+    width: 30%;
+    margin: 1.5%;
+    margin-bottom: 1%;
+    height: 300px;
+  }
 }
 @media only screen and (max-width: 880px){
   .project{
@@ -441,16 +578,6 @@ html{
 
 
 @media only screen and (max-width: 880px){
-  .pagemark{
-    position: sticky;
-    top: 0;
-    left: 30px;
-    width: 100px;
-    padding-top: 20px;
-    font-size: 2em;
-    margin:0;
-    z-index: 100;
-  }
   .positionbg{
     font-size: 13em;
   }
