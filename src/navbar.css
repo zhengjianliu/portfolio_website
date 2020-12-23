@@ -2,19 +2,18 @@
 .navbarcontainer{
   position: sticky;
   top: 0px;
+  z-index: 100000;
 }
 .navbar{
   position: absolute;
   display: flex;
   justify-content: space-between;
   height: 60px;
-  background: white;
   width: 99%;
   margin-top: 10px;
   margin-left: .5%;
   margin-right: .5%;
   border-radius: 15px;
-  z-index: 100;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(5px);
@@ -63,21 +62,23 @@ li{
 }
 
 .info{
-  margin-right: 15vw;
+  margin-right: 10%;
+  transition: .5s;
 }
 
 .info a img{
   width: 40px;
   padding-top:10px;
   margin-left: 15px;
+  transition: 1s;
 }
 
 
 
-@media only screen and (max-width: 980px){
+@media only screen and (max-width: 880px){
   .info{
-    width: auto;
-    margin-right: 70px;
+    width: 250px;
+    padding-right: 10px;
   }
 
   .navbar .items li:nth-child(n+1){
@@ -89,12 +90,25 @@ li{
     transition: 0.5s;
   } */
 
+  .info.active{
+    width: 100%;
+    margin-right: 0px;
+    transition: 1s;
+  }
+
+  .info.active a img{
+    width: 10%;
+    max-width: 55px;
+    padding-top: 3vh;
+    margin-right: 10%;
+    transition: 1s;
+  }
+
   .items{
     width: 0px;
     padding-left:0;
     padding-right: 0;
     margin-right: 0;
-    margin-left: 10vw;
   }
 
   .hamburger{
@@ -123,6 +137,7 @@ li{
 
   .navbar.active .items{
     display: block;
+    margin-top: 5vh;
   }
 
   .navbar.active .items li{
@@ -131,17 +146,18 @@ li{
     justify-content: center;
     align-items: center;
     margin:0;
-    font-size: 50pt;
+    font-size: 40pt;
     transform: translateY(-100%) scale(0);
     margin-top: 12vh;
+    padding-left: 10vw;
   }
   .navbar li a{
     transition: 0.4s;
-    color: rgba(87, 80, 80,0.8);
+    color: rgba(0, 0, 0, 0.7);
   }
 
   .navbar.active li a:hover{
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     padding-left: 3vw;
     color: black;
     transition: .4s;
