@@ -7,8 +7,8 @@ import Sourcecode from '../images/sourcecode.png'
 class Projects extends Component {
 
   displayTags = (tags = this.props.tags) => {
-    return tags.map(tag => {
-      return <Pill tag={tag}/>
+    return tags.map((tag,index) => {
+      return <Pill key={index} tag={tag}/>
     })
   }
 

@@ -47,15 +47,6 @@ html{
   background-color: rgb(50, 50, 50);
 }
 
-.email{
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  letter-spacing: 2px;
-  width: 40px;
-  line-height: 3;
-  font-weight: 700;
-  font-size: 10pt;
-}
 .positionbg{
   padding-left: 2vw;
   font-size: 17em;
@@ -201,7 +192,6 @@ html{
   background: white;
   z-index: 20;
   position: static;
-  background-color: orange;
 }
 
 
@@ -281,7 +271,6 @@ html{
 
 
 #projects{
-  background: slategrey;
 }
 
 .projectcontainer{
@@ -488,22 +477,7 @@ html{
 }
 
 
-@media only screen and (min-width: 1500px){
-  .project{
-    width: 30%;
-    margin: 1.5%;
-    margin-bottom: 1%;
-    height: 300px;
-  }
-}
-@media only screen and (max-width: 880px){
-  .project{
-    width: 100%;
-    margin: 0;
-    margin-bottom: 5%;
-    height: 300px;
-  }
-}
+
 
 
 
@@ -526,13 +500,63 @@ html{
 
 
 #contact{
-  background: lightgrey;
+
+  height: 50vh;
 }
+
+.contactcontainer{
+  margin-top: 10vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contactcontainer h1{
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+.contactcontainer p{
+  color:rgb(78, 78, 78);
+  font-size: 1.4em;
+  margin-bottom: 50px;
+}
+
+.contactcontainer a{
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 3px solid rgb(0, 158, 217);
+  color: rgb(0, 158, 217);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.contactcontainer a:hover{
+  background-color: rgb(0, 158, 217);
+  color: white;
+}
+
+
+hr{
+  border:1px solid rgb(78, 78, 78);
+  width: 188px;
+}
+
+
+
+
+
+
 
 #footer{
   height: 30px;
   padding-top: 12px;
-  background: orange;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
 }
 
 .footernote{
@@ -544,7 +568,15 @@ html{
 #footer p{
   font-weight: 700;
   margin: 0;
+  color: white;
 }
+#footer a{
+  color: white;
+}
+
+
+
+
 
 .pagemark{
   text-align: left;
@@ -617,5 +649,30 @@ html{
   }
   .aboutright img{
     max-width: 300px;
+  }
+
+
+  .contactcontainer{
+    margin-top: 20vh;
+  }
+  .project{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5%;
+    height: 300px;
+  }
+}
+
+
+@media only screen and (min-width: 1500px){
+  .project{
+    width: 30%;
+    margin: 1.5%;
+    margin-bottom: 1%;
+    height: 300px;
+  }
+
+  .contactcontainer{
+    margin-top: 10vh;
   }
 }
