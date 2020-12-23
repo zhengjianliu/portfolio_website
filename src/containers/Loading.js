@@ -14,7 +14,7 @@ class Loading extends Component{
   }
 
   checkloader=()=>{
-    if(this.state.percentage > 101){
+    if(this.state.percentage > 100){
       clearInterval(this.loaderscript)
       this.props.finishloading(this.state.percentage)
     }
