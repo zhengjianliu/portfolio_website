@@ -321,6 +321,98 @@ html{
   transform: scale(1.1);
 }
 
+.resumelink{
+  width: 100%;
+
+}
+
+.resumelink div{
+  width: 60%;
+  margin: 50px 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resumelink div a{
+  font-size: 1.4em;
+  background-color: rgb(0, 158, 217);
+  font-weight: 700;
+  padding: 7px 30px;
+  color: white;
+  border-radius: 40px;
+  display: flex;
+}
+
+
+
+
+
+
+
+#skills{
+
+}
+
+.skillscontainer{
+  width: 80%;
+  max-width: 1200px;
+  margin:auto;
+}
+
+.skillbox{
+  width: 30%;
+  height: 240px;
+  float: left;
+  margin:1%;
+  background-color: rgba(129, 129, 129, 0.6);
+  border-radius: 5px;
+  transition: .2s;
+  padding-top: 10px;
+}
+.skillbox:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 20px 2px rgba(255, 255, 255, 0.3);
+}
+
+.skillbox b{
+  color: rgb(0, 186, 255);
+  font-size: 1.5em;
+}
+
+.skill{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+  float: left;
+}
+
+.skill img{
+  width: 70px;
+}
+
+.skill p{
+  width: 90%;
+  margin:5%;
+  font-size:1.15em;
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -535,11 +627,12 @@ html{
   padding: 1px 10px;
   border-radius: 20px;
 }
+
 .viewmorebutton{
   justify-content: center;
   align-items: center;
   margin:1.5%;
-  padding: 10px 60px;
+  padding: 10px 30px;
   font-size: 1.5em;
   font-weight: 700;
   margin: 2% 20%;
@@ -563,6 +656,18 @@ html{
 
 
 
+
+
+
+#blogs{
+
+}
+
+.blogscontainer{
+  width: 70%;
+  margin: auto;
+  max-width: 1200px;
+}
 
 
 
@@ -597,6 +702,7 @@ html{
 }
 
 .contactcontainer h1{
+  color: white;
   margin-top: 0;
   font-size: 3.5em;
   margin-bottom: 20px;
@@ -667,7 +773,7 @@ hr{
   color:rgb(0, 158, 217);
   text-align: left;
   height: 50px;
-  padding-top: 15vh;
+  padding-top: 100px;
   margin-top: 0;
   font-size: 2.5em;
   transition: .3s;
@@ -677,7 +783,6 @@ hr{
   transform: translateY(20px) scale(0);
   opacity: 0;
 }
-
 
 
 
@@ -752,6 +857,11 @@ hr{
     padding-top: 15vh;
     width: 80%;
     margin: auto;
+  }
+
+  .skillbox{
+    width: 100%;
+    margin-bottom: 5%;
   }
 }
 

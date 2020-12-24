@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Project from '../components/Project'
-// import image from '../images/js.png'
+import Fade from 'react-reveal/Fade';
 
 class Projects extends Component {
 
@@ -45,7 +45,7 @@ class Projects extends Component {
           tags={['ReactJS','Affinity']}
           desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
             />
-          <button className="viewmorebutton">View More</button>
+          <Fade bottom><button className="viewmorebutton">View More</button></Fade>
       </div>
     </div>
   )

@@ -7,6 +7,8 @@ import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
 import Typewriter from '../components/Typewriter'
+import Linkedin from '../images/linkedin.png'
+import Fade from 'react-reveal/Fade';
 
 class About extends Component{
   render(){
@@ -17,9 +19,15 @@ class About extends Component{
         <div className="aboutcontainer">
           <div className="aboutleft">
             <h1 className={this.props.open?"pagemark":"pagemark remove"}>About Me</h1>
-            <p><b>Hi, my name is Zhengjian Liu,
+            <Fade bottom>
+              <p>
+              <b>Hi, my name is Zhengjian Liu,
               <br/> a software Engineer (Full stack web developer) with a passion to build exceptional websites,
               applications or anything in between.</b>
+              </p>
+              </Fade>
+              <Fade bottom>
+              <p>
               <br/>
               <br/>
               With experience in Ruby on Rails, JavaScript, and React
@@ -30,6 +38,8 @@ class About extends Component{
               <br/>
               Here are a few technologies I've been working with recently:<br/>
             </p>
+            </Fade>
+            <Fade bottom cascade>
             <div className="icons">
               <img src={Html} alt="html icon"/>
               <img src={Css} alt="Css icon"/>
@@ -39,6 +49,16 @@ class About extends Component{
               <img src={Affinity} alt="Affinity icon" className="smallericon"/>
               <img src={Rubyonrails} alt="Rubyonrails icon" className="smallericon"/>
             </div>
+            </Fade>
+            <Fade bottom cascade>
+            <div className="resumelink">
+              <div>
+                <a href="#about">View Resume</a>
+                <a href="#about">Go to Linkedin</a>
+              </div>
+
+            </div>
+            </Fade>
           </div>
 
           {/*<div className="aboutright">
