@@ -1,16 +1,15 @@
 import React, {Component} from 'react'
 import Project from '../components/Project'
-// import image from '../images/js.png'
+import Fade from 'react-reveal/Fade';
 
 class Projects extends Component {
 
   render() {
     let image = "https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg"
-    return (<div id="projects" className="fullpage">
-      <h1 className={this.props.open
-          ? "pagemark"
-          : "pagemark remove"}>Projects</h1>
+    return (
+      <div id="projects" className="fullpage">
       <div className="projectcontainer">
+        <h1 className={this.props.open? "pagemark":"pagemark remove"}>Projects</h1>
         <Project
           image={image}
           alt={"project image"}
@@ -39,16 +38,17 @@ class Projects extends Component {
           tags={['Vanilla JS','ROR','Affinity']}
           desp="The web version of TikTok uses YouTube API to generate video feed and provides a user experience similar to TikTok"
             />
-            <Project
-              image={image}
-              alt={"project image"}
-              name={"Portfolio Website"}
-              tags={['ReactJS','Affinity']}
-              desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
-                />
+        <Project
+          image={image}
+          alt={"project image"}
+          name={"Portfolio Website"}
+          tags={['ReactJS','Affinity']}
+          desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+            />
+          <Fade bottom><button className="viewmorebutton">View More</button></Fade>
       </div>
-
-    </div>)
+    </div>
+  )
   }
 }
 

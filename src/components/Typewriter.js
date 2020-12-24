@@ -19,7 +19,7 @@ export default class Typewriter extends Component{
       if(this.state.titles[this.state.target].length===this.state.count){
         this.checkTyping()
       }
-    },100)
+    },50)
   }
 
   deleting = () =>{
@@ -29,14 +29,14 @@ export default class Typewriter extends Component{
       if(this.state.letters===-1){
         this.afterDeleting()
       }
-    },50)
+    },20)
   }
 
   checkTyping = ()=>{
     clearInterval(this.typingscript)
     setTimeout(()=>{
       this.deleting()
-    },3000)
+    },2000)
   }
 
   afterDeleting = () =>{
@@ -56,7 +56,7 @@ export default class Typewriter extends Component{
   }
   render(){
     return(
-      <div>{this.state.typing}<b className="typerwriter">|</b></div>
+      <span>{this.state.typing}<b className="typerwriter">|</b></span>
     )
   }
 }
