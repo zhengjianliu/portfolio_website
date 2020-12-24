@@ -618,6 +618,7 @@ html{
   justify-content: center;
   font-size: 0.7em;
   font-weight: 700;
+  color: white;
 }
 
 .pill{
@@ -670,8 +671,38 @@ html{
 }
 
 
+.blogbox{
+  width: 30%;
+  margin: 1.5%;
+  float: left;
+}
 
+.blogbox img{
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+.blog{
+  text-align: left;
+}
+
+.blog b {
+  font-size: 1.7em;
+  color: white;
+}
+.blog small{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.blogtags{
+  font-size: 1em;
+  justify-content: flex-start;
+}
+
+.blogtags .pill{
+  margin-left: 0;
+  margin-right: 15px;
+}
 
 
 
@@ -689,13 +720,13 @@ html{
 
 #contact{
   background-color: rgb(50, 50, 50);
-  height: 70vh;
+  height: 700px;
   z-index: 200;
 }
 
 .contactcontainer{
   width: 100%;
-  padding-top: 15vh;
+  padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -764,6 +795,15 @@ hr{
 #footer a{
   color: white;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -860,6 +900,10 @@ hr{
   }
 
   .skillbox{
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .blogbox{
     width: 100%;
     margin-bottom: 5%;
   }

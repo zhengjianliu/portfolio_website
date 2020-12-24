@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import Pill from './Pill'
 import Arrowup from '../images/arrowup.png'
-import Externallink from '../images/externallink.png'
-import Sourcecode from '../images/sourcecode.png'
 import Fade from 'react-reveal/Fade';
 
 class Projects extends Component {

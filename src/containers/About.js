@@ -6,13 +6,10 @@ import Redux from '../images/redux.png'
 import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
-import Typewriter from '../components/Typewriter'
-import Linkedin from '../images/linkedin.png'
 import Fade from 'react-reveal/Fade';
 
 class About extends Component{
   render(){
-    var greeting = ["Hi, nice to meet ya!","Welcome to my website."]
     return(
       <div id="about" className="fullpage">
 
