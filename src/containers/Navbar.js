@@ -1,8 +1,4 @@
 import React, {Component} from 'react'
-import Linkedin from '../images/linkedin.png'
-import Github from '../images/github.png'
-import Medium from '../images/medium.png'
-import Email from '../images/email.png'
 
 class Navbar extends Component{
 
@@ -19,7 +15,6 @@ class Navbar extends Component{
             <li><a href="#blogs">Blogs</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-
           <div className={this.props.open?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>
             <li className="line"></li>

@@ -15,7 +15,7 @@ class Blog extends Component {
     return (
       <Fade bottom>
         <div className="blogbox">
-          <img src={Blog1}/>
+          <img src={Blog1} alt="img"/>
           <div className="blog">
             <b>Self In Ruby🔥</b>
             <div className="blogtags pills">

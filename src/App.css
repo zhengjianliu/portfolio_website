@@ -243,7 +243,7 @@ html{
 
 #about{
   z-index: 20;
-  position: static;
+  padding-bottom: 120px;
 }
 
 
@@ -350,7 +350,7 @@ html{
 
 
 #skills{
-
+  padding-bottom: 120px;
 }
 
 .skillscontainer{
@@ -421,6 +421,7 @@ html{
 
 
 #projects{
+  padding-bottom: 150px;
 }
 
 .projectcontainer{
@@ -661,7 +662,7 @@ html{
 
 
 #blogs{
-
+  padding-bottom: 120px;
 }
 
 .blogscontainer{
@@ -721,6 +722,7 @@ html{
 #contact{
   background-color: rgb(50, 50, 50);
   height: 700px;
+  padding-bottom: 150px;
   z-index: 200;
 }
 
