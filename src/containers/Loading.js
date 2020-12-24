@@ -10,7 +10,7 @@ class Loading extends Component{
     this.loaderscript = setInterval(()=>{
       this.setState({percentage:this.state.percentage+1})
       this.checkloader()
-    },22)
+    },10)
   }
 
   checkloader=()=>{

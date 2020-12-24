@@ -9,11 +9,7 @@
   display: flex;
   justify-content: space-between;
   height: 60px;
-  width: 99%;
-  margin-top: 10px;
-  margin-left: .5%;
-  margin-right: .5%;
-  border-radius: 15px;
+  width: 100%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -22,7 +18,7 @@
 
 .navbar li a{
   transition: 0.4s;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 1);
 }
 
 .navbar li a:hover{
@@ -142,8 +138,8 @@ li{
     margin: 0px;
     border-radius: 0px;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
   }
 
   .navbar.active .items{
@@ -164,7 +160,7 @@ li{
   }
   .navbar li a{
     transition: 0.4s;
-    color: rgba(0, 171, 255, 1);
+    color: rgba(0, 0, 0, 1);
   }
 
   .navbar.active li a:hover{

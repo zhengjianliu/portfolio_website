@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Project from '../components/Project'
+import Project from '../components/projectcard'
 import Fade from 'react-reveal/Fade';
 
 class Projects extends Component {
@@ -22,7 +22,7 @@ class Projects extends Component {
           alt={"project image"}
           name={"BestBey"}
           tags={['ReactJS','Redux','ROR']}
-          desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+          desp="Bestbey is an eCommerce store that brings you superior quality in electronics."
           />
         <Project
           image={image}
@@ -34,21 +34,14 @@ class Projects extends Component {
         <Project
           image={image}
           alt={"project image"}
-          name={"TikTok Clone"}
-          tags={['Vanilla JS','ROR','Affinity']}
-          desp="The web version of TikTok uses YouTube API to generate video feed and provides a user experience similar to TikTok"
-            />
-        <Project
-          image={image}
-          alt={"project image"}
           name={"Portfolio Website"}
           tags={['ReactJS','Affinity']}
-          desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+          desp="I designed the personal homepage and implemented the dark & light mode features to it."
             />
           <Fade bottom><button className="viewmorebutton">View More</button></Fade>
       </div>
     </div>
-  )
+    )
   }
 }
 

@@ -13,6 +13,7 @@ class App extends Component{
   state={
     open: true,
     loading:false,
+    lightmode:true
   }
 
   clickHandler = () =>{
@@ -28,12 +29,17 @@ class App extends Component{
     }
   }
 
+  lightmode = () =>{
+    this.setState({lightmode:!this.state.lightmode})
+  }
+
   render(){
     return (
-      <div className="App">
+      <div className={this.state.lightmode?"App": "App light"}>
         {this.state.loading?
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
+          <div className="modebutton" onClick={this.lightmode}>{this.state.lightmode?"Light":"Dark"}</div>
           <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
           <About open={this.state.open} />
           <Skills open={this.state.open} />

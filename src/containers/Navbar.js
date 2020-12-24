@@ -1,10 +1,8 @@
 import React, {Component} from 'react'
 
 class Navbar extends Component{
-
   render(){
     return(
-
       <div className="navbarcontainer" >
         <div className={this.props.open?"navbar":"navbar active"}>
           <ul className="items" onClick={this.props.closeHandler}>
@@ -22,7 +20,6 @@ class Navbar extends Component{
           </div>
         </div>
       </div>
-
     )
   }
 }
