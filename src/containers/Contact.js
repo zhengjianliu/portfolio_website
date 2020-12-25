@@ -5,7 +5,8 @@ import Github from '../images/github.png'
 import Medium from '../images/medium.png'
 import Email from '../images/email.png'
 import {connect} from 'react-redux'
-
+import Arrow from '../images/arrow1.png'
+import {animateScroll as scroll} from 'react-scroll'
 class Contact extends Component{
   render(){
     return(
@@ -26,6 +27,7 @@ class Contact extends Component{
               <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
             </div>
           </Fade>
+            <img className="scrollup" src={Arrow} alt="scroll up" onClick={()=>scroll.scrollToTop()}/>
         </div>
 
     )

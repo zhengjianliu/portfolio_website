@@ -14,7 +14,7 @@ class Home extends Component{
     var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
-        <div className={this.props.nightmode? "positionbg": "positionbg light"}>Full-Stack<br/>Web Developer</div>
+        <div className={this.props.nightmode? "positionbg": "positionbg light"}>Full Stack<br/>Web<br/>Developer</div>
         <div className={this.props.nightmode? "intro": "intro light"}>
           <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu.</span></h1>
           <h2>I'm a <span><Typewriter titles={titles}/></span></h2>

@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import React, {Component} from 'react'
 import Home from './containers/Home'
 import About from './containers/About'

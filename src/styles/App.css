@@ -139,9 +139,10 @@ html{
 .positionbg{
   padding-left: 2vw;
   font-size: 17em;
+  bottom: 0;
   left: 0;
   position: static;
-  overflow:hidden;
+  overflow-x:hidden;
   z-index: 0;
   font-weight: 700;
   color: rgba(255, 255, 255, .02);
@@ -1049,6 +1050,28 @@ hr{
   width: 188px;
   transition: 1s;
 }
+
+.scrollup{
+  width: 50px;
+  margin-top: 130px;
+  transform: rotate(180deg);
+  cursor: pointer;
+  background-color: rgb(74, 74, 74);
+  padding: 2px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.scrollup:hover{
+  background-color: rgb(0, 158, 217);
+}
+
+
+
+
+
+
+
 
 
 

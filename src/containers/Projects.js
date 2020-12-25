@@ -51,7 +51,7 @@ class Projects extends Component {
           image={Porfolio}
           alt={"project image"}
           name={"Portfolio Website"}
-          tags={['ReactJS','Affinity']}
+          tags={['ReactJS','Redux','Affinity']}
           desp="I designed the personal homepage and implemented the dark & light mode features to it."
           frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
           backend=""
