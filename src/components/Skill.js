@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Fade from 'react-reveal/Fade';
+import {connect} from 'react-redux'
 
 class Skill extends Component {
 
@@ -12,7 +13,7 @@ class Skill extends Component {
   render() {
     return (
       <Fade bottom>
-        <div className="skillbox">
+        <div className={this.props.nightmode?"skillbox":"skillbox light"}>
           <b>{this.props.topic}</b>
           <div className="skill">
             {this.displaySkills()}
@@ -24,4 +25,10 @@ class Skill extends Component {
   }
 }
 
-export default Skill
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Skill)

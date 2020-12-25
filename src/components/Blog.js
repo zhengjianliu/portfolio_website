@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Fade from 'react-reveal/Fade';
-
 import Pill from './Pill'
+import {connect} from 'react-redux'
 
 class Blog extends Component {
 
@@ -18,7 +18,7 @@ class Blog extends Component {
           <a href={this.props.link} target="_blank" rel="noreferrer">
             <img src={this.props.image} alt="img" rel="noreferrer"/>
           </a>
-          <div className="blog">
+          <div className={this.props.nightmode?"blog":"blog light"}>
             <b>{this.props.name}</b>
             <div className="blogtags pills">
               {this.displayTags()}
@@ -32,4 +32,10 @@ class Blog extends Component {
   }
 }
 
-export default Blog
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Blog)

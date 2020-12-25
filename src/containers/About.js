@@ -7,6 +7,7 @@ import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
 import Fade from 'react-reveal/Fade';
+import {connect} from 'react-redux'
 
 class About extends Component{
   render(){
@@ -14,7 +15,7 @@ class About extends Component{
       <div id="about" className="fullpage">
 
         <div className="aboutcontainer">
-          <div className="aboutleft">
+          <div className={this.props.nightmode?"aboutleft":"aboutleft light"}>
             <h1 className={this.props.open?"pagemark":"pagemark remove"}>About Me</h1>
             <Fade bottom>
               <p>
@@ -56,15 +57,16 @@ class About extends Component{
               </div>
             </Fade>
           </div>
-
-          {/*<div className="aboutright">
-            <img src={Affinity} alt="selfie"/>
-            <Typewriter titles={greeting}/>
-          </div>*/}
         </div>
       </div>
     )
   }
 }
 
-export default About
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(About)

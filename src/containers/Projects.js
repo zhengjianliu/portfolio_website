@@ -5,6 +5,7 @@ import Ziptrade from '../images/ziptrade.jpg'
 import Bestbey from '../images/bestbey.jpg'
 import Youplay from '../images/youplay.jpg'
 import Porfolio from '../images/portfolio.jpg'
+import {connect} from 'react-redux'
 
 class Projects extends Component {
 
@@ -50,7 +51,7 @@ class Projects extends Component {
           image={Porfolio}
           alt={"project image"}
           name={"Portfolio Website"}
-          tags={['ReactJS','Affinity']}
+          tags={['ReactJS','Redux','Affinity']}
           desp="I designed the personal homepage and implemented the dark & light mode features to it."
           frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
           backend=""
@@ -59,7 +60,7 @@ class Projects extends Component {
           />
         <Fade bottom>
           <a href="https://github.com/zhengjianliu?tab=repositories" target="_blank" rel="noreferrer">
-            <button className="viewmorebutton">View More</button>
+            <button className={this.props.nightmode?"viewmorebutton":"viewmorebutton light"}>View More</button>
           </a>
         </Fade>
       </div>
@@ -68,4 +69,10 @@ class Projects extends Component {
   }
 }
 
-export default Projects
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default (connect)(msp)(Projects)

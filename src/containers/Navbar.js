@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {Link} from 'react-scroll'
 
 class Navbar extends Component{
   render(){
     return(
       <div className="navbarcontainer" >
-        <div className={this.props.open?"navbar":"navbar active"}>
+        <div id={this.props.nightmode?null:"light"} className={this.props.open?"navbar":"navbar active"}>
           <ul className="items" onClick={this.props.closeHandler}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blogs">Blogs</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="home" smooth={true} duration={500}><b onClick={this.props.closeHandler}>Home</b></Link></li>
+            <li><Link to="about" smooth={true} duration={700}><b onClick={this.props.closeHandler}>About</b></Link></li>
+            <li><Link to="skills" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Skills</b></Link></li>
+            <li><Link to="projects" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Projects</b></Link></li>
+            <li><Link to="blogs" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Blogs</b></Link></li>
+            <li><Link to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
           </ul>
           <div className={this.props.open?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>
@@ -24,4 +26,10 @@ class Navbar extends Component{
   }
 }
 
-export default Navbar
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Navbar)

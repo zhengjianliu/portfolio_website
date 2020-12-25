@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Wave from 'react-wavify'
+import {connect} from 'react-redux'
 
 class Loading extends Component{
   state={
@@ -27,7 +28,7 @@ class Loading extends Component{
     return(
       <div id="loading" className={this.state.percentage>80?"done":null}>
       <div className="wave" style={ { bottom: `${ this.state.percentage+4}vh` } }>
-      <Wave fill='rgb(0, 158, 217)'
+      <Wave fill={this.props.nightmode?'rgb(80, 80, 80)':'rgb(0, 158, 217)'}
         paused={false}
         options={{
           height: 100,
@@ -37,10 +38,16 @@ class Loading extends Component{
         }}/>
         </div>
         <h1>{parseInt(this.state.percentage)}% Loading... 🏃</h1>
-        <div className="base" style={ { height: `${ this.state.percentage }vh` } }></div>
+        <div className={this.props.nightmode?"base":"base light"} style={ { height: `${ this.state.percentage }vh` } }></div>
         </div>
     )
   }
 }
 
-export default Loading
+const msp = state =>{
+  return {
+    nightmode: state.nightmode
+  }
+}
+
+export default connect(msp)(Loading)

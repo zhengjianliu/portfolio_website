@@ -16,13 +16,14 @@
   transition: .5s;
 }
 
-.navbar li a{
-  transition: 0.4s;
+.navbar li b{
+  padding-top: 3px;
   color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
-.navbar li a:hover{
-  transition: 0.4s;
+.navbar li b:hover{
+  transition: 0.2s;
   color: rgba(0, 0, 0, 1);
 }
 
