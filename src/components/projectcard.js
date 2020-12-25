@@ -14,7 +14,7 @@ class ProjectCard extends Component {
       <Fade bottom>
         <div className="projectbox">
           <div className="projectboxleft" >
-            <a href={this.props.livedemo} target="_blank">
+            <a href={this.props.livedemo} target="_blank" rel="noreferrer">
               <img src={this.props.image} alt={this.props.name}/>
             </a>
           </div>
@@ -25,15 +25,13 @@ class ProjectCard extends Component {
               {this.displayTags()}
             </div>
             <div className="links">
-              <a href={this.props.video} target="_blank"><b>Video</b></a>
-              <a href={this.props.frontend} target="_blank"><b>Front End</b></a>
-              <a href={this.props.backend} target="_blank"><b>Back End</b></a>
+              <a href={this.props.video} target="_blank" rel="noreferrer"><b>Video</b></a>
+              <a href={this.props.frontend} target="_blank" rel="noreferrer"><b>Front End</b></a>
+              <a href={this.props.backend} target="_blank" rel="noreferrer"><b>Back End</b></a>
             </div>
-            <a href={this.props.livedemo} target="_blank">
-              <div className="livedemobutton">
-                <b>Live Demo</b>
-              </div>
-            </a>
+            <div className="livedemobutton">
+              <a href={this.props.livedemo} target="_blank" rel="noreferrer"><b>Live Demo</b></a>
+            </div>
           </div>
         </div>
       </Fade>

@@ -15,8 +15,8 @@ class Blog extends Component {
     return (
       <Fade bottom>
         <div className="blogbox">
-          <a href={this.props.link} target="_blank">
-            <img src={this.props.image} alt="img"/>
+          <a href={this.props.link} target="_blank" rel="noreferrer">
+            <img src={this.props.image} alt="img" rel="noreferrer"/>
           </a>
           <div className="blog">
             <b>{this.props.name}</b>

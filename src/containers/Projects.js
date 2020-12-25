@@ -58,7 +58,7 @@ class Projects extends Component {
           video=""
           />
         <Fade bottom>
-          <a href="https://github.com/zhengjianliu?tab=repositories" target="_blank">
+          <a href="https://github.com/zhengjianliu?tab=repositories" target="_blank" rel="noreferrer">
             <button className="viewmorebutton">View More</button>
           </a>
         </Fade>

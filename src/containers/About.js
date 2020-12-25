@@ -48,13 +48,12 @@ class About extends Component{
             </div>
             </Fade>
             <Fade bottom cascade>
-            <div className="resumelink">
-              <div>
-                <a href="#about">View Resume</a>
-                <a href="#about">Go to Linkedin</a>
+              <div className="resumelink">
+                <div>
+                  <a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer">View Resume</a>
+                  <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer">Go to Linkedin</a>
+                </div>
               </div>
-
-            </div>
             </Fade>
           </div>
 
