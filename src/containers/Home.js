@@ -5,14 +5,16 @@ import Medium from '../images/medium.png'
 import Email from '../images/email.png'
 import Arrow from '../images/arrow1.png'
 import Typewriter from '../components/Typewriter'
+import {connect} from 'react-redux'
 
 class Home extends Component{
   render(){
+    console.log(this.props.nightmode?"y":"n")
     var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
-        <div className="positionbg">Full-Stack<br/>Web Developer</div>
-        <div className="intro">
+        <div className={this.props.nightmode? "positionbg": "positionbg light"}>Full-Stack<br/>Web Developer</div>
+        <div className={this.props.nightmode? "intro": "intro light"}>
           <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu.</span></h1>
           <h2>I'm a <span><Typewriter titles={titles}/></span></h2>
           <a href="#about" onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></a>
@@ -30,4 +32,10 @@ class Home extends Component{
   }
 }
 
-export default Home
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Home)

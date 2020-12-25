@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 class Navbar extends Component{
   render(){
     return(
       <div className="navbarcontainer" >
-        <div className={this.props.open?"navbar":"navbar active"}>
+        <div id={this.props.nightmode?null:"light"} className={this.props.open?"navbar":"navbar active"}>
           <ul className="items" onClick={this.props.closeHandler}>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -24,4 +25,10 @@ class Navbar extends Component{
   }
 }
 
-export default Navbar
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Navbar)

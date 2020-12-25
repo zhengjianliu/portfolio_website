@@ -9,11 +9,12 @@ import Footer from './containers/Footer'
 import Loading from './containers/Loading'
 import Blogs from './containers/Blogs'
 import Skills from './containers/Skills'
+import {connect} from 'react-redux'
+
 class App extends Component{
   state={
     open: true,
     loading:false,
-    nightmode:true,
   }
 
   clickHandler = () =>{
@@ -30,16 +31,16 @@ class App extends Component{
   }
 
   nightmode = () =>{
-    this.setState({nightmode:!this.state.nightmode})
+    this.props.changeMode()
   }
 
   checktime = () =>{
     var currentTime = new Date()
     let hours = currentTime.getHours()
-    if(hours>16){
-      this.setState({nightmode:true})
+    if(hours >17 && hours<6){
+      this.props.darkMode()
     }else{
-      this.setState({nightmode:false})
+      this.props.lightMode()
     }
   }
 
@@ -47,16 +48,15 @@ class App extends Component{
     this.checktime()
   }
 
-
   render(){
     return (
-      <div className={this.state.nightmode?"App": "App light"}>
+      <div className={this.props.nightmode?"App": "App light"}>
         {!this.state.loading?
         <Loading finishloading={this.finishloading}/>
         :
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
-          <div className="modebutton" onClick={this.nightmode}>{this.state.nightmode?"Dark On":"Dark Off"}</div>
+          <div className="modebutton" onClick={this.nightmode}>{this.props.nightmode?"Dark On":"Dark Off"}</div>
           <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
           <About open={this.state.open} />
           <Skills open={this.state.open} />
@@ -71,4 +71,18 @@ class App extends Component{
   }
 }
 
-export default App;
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+const mdp = dispatch =>{
+  return {
+    changeMode: () =>dispatch({type:"CHANGE_MODE"}),
+    lightMode:() =>dispatch({type:"LIGHT_MODE"}),
+    darkMode:() =>dispatch({type:"DARK_MODE"}),
+  }
+}
+
+export default connect(msp,mdp)(App);
