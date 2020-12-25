@@ -10,7 +10,6 @@ import {Link} from 'react-scroll'
 
 class Home extends Component{
   render(){
-    console.log(this.props.nightmode?"y":"n")
     var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
