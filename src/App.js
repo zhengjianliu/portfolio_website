@@ -13,6 +13,7 @@ class App extends Component{
   state={
     open: true,
     loading:false,
+    nightmode:true,
   }
 
   clickHandler = () =>{
@@ -28,12 +29,34 @@ class App extends Component{
     }
   }
 
+  nightmode = () =>{
+    this.setState({nightmode:!this.state.nightmode})
+  }
+
+  checktime = () =>{
+    var currentTime = new Date()
+    let hours = currentTime.getHours()
+    if(hours>16){
+      this.setState({nightmode:true})
+    }else{
+      this.setState({nightmode:false})
+    }
+  }
+
+  componentDidMount(){
+    this.checktime()
+  }
+
+
   render(){
     return (
-      <div className="App">
-        {this.state.loading?
+      <div className={this.state.nightmode?"App": "App light"}>
+        {!this.state.loading?
+        <Loading finishloading={this.finishloading}/>
+        :
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
+          <div className="modebutton" onClick={this.nightmode}>{this.state.nightmode?"Dark On":"Dark Off"}</div>
           <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
           <About open={this.state.open} />
           <Skills open={this.state.open} />
@@ -42,8 +65,7 @@ class App extends Component{
           <Contact open={this.state.open}/>
           <Footer/>
         </div>
-        :
-        <Loading finishloading={this.finishloading}/>}
+        }
       </div>
     )
   }

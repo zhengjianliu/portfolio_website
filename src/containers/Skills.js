@@ -24,19 +24,19 @@ class Skills extends Component{
           <Skill
             topic={"Front End Development"}
             icons={[Reacticon,Redux]}
-            desp={"My coding journey started by learning how to create a mobile friendly website using html, css, js."}/>
+            desp={"I use react for front-end development, and use redux to handle states. I ensure the reliability of my code, and at the same time make sure my code is dry by creating reusable compoenents."}/>
           <Skill
             topic={"Back End Development"}
             icons={[Rubyonrails]}
-            desp={"My coding journey started by learning how to create a mobile friendly website using html, css, js."}/>
+            desp={"I use ruby on rails to develop backend, and follow the design of MVC to implement and achieve the functional requirements of each project."}/>
           <Skill
             topic={"Version Control"}
             icons={[Github]}
-            desp={"My coding journey started by learning how to create a mobile friendly website using html, css, js."}/>
+            desp={"I use Github in nearly every single of my project for version control. Also, I familiar with using terminal interface for github."}/>
           <Skill
             topic={"Design Tool"}
             icons={[Affinity,Affinityphoto]}
-            desp={"My coding journey started by learning how to create a mobile friendly website using html, css, js."}/>
+            desp={"I use affinity designer tools to design and produce front-end icons and backgrounds...etc. Also, optimize visual apperance of the software and the user experience."}/>
         </div>
       </div>
     )

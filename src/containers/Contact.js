@@ -8,7 +8,7 @@ class Contact extends Component{
   render(){
     return(
 
-        <div id="contact">
+        <div id="contact" className="fullpage">
           <Fade bottom>
             <div className="contactcontainer">
               <h1>Get In Touch</h1>

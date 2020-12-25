@@ -2,6 +2,14 @@
 *{
   outline:none;
   border: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  -webkit-user-drag: none;
+  list-style-type: none;
 }
 
 /* scrollbar */
@@ -29,8 +37,25 @@ body::-webkit-scrollbar-thumb {
 
 .App {
   text-align: center;
-
+   background-color: rgb(50, 50, 50);
+   transition: 1s;
 }
+
+.App.light{
+  background-color: white;
+  transition: 1s;
+}
+
+.modebutton{
+  position: fixed;
+  top: 65px;
+  right:20px;
+  z-index: 10000000;
+  font-weight: 700;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -40,7 +65,6 @@ html{
   height: auto;
   min-height: 60vh;
   overflow:hidden;
-  background-color: rgb(50, 50, 50);
 }
 
 .wholeapp{
@@ -211,8 +235,10 @@ html{
 .arrow{
   width: 50px;
   transform: rotate(-90deg);
+  background-color: rgb(50, 50, 50);
   transition: .3s;
   border-radius: 50%;
+  padding: 2px;
 }
 
 .arrow:hover{
@@ -243,7 +269,7 @@ html{
 
 #about{
   z-index: 20;
-  position: static;
+  padding-bottom: 120px;
 }
 
 
@@ -322,19 +348,19 @@ html{
 }
 
 .resumelink{
-  width: 100%;
-
+  width: 90%;
+  margin: 50px 5%;
 }
 
 .resumelink div{
-  width: 60%;
-  margin: 50px 20%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
 }
 
 .resumelink div a{
-  font-size: 1.4em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2em;
   background-color: rgb(0, 158, 217);
   font-weight: 700;
   padding: 7px 30px;
@@ -350,17 +376,17 @@ html{
 
 
 #skills{
-
+  padding-bottom: 120px;
 }
 
 .skillscontainer{
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin:auto;
 }
 
 .skillbox{
-  width: 30%;
+  width: 48%;
   height: 240px;
   float: left;
   margin:1%;
@@ -368,10 +394,6 @@ html{
   border-radius: 5px;
   transition: .2s;
   padding-top: 10px;
-}
-.skillbox:hover{
-  transform: translateY(-5px);
-  box-shadow: 0px 3px 20px 2px rgba(255, 255, 255, 0.3);
 }
 
 .skillbox b{
@@ -393,10 +415,11 @@ html{
 .skill p{
   width: 90%;
   margin:5%;
-  font-size:1.15em;
+  font-size:1.1em;
   color: white;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.1;
+  text-align: left;
 }
 
 
@@ -421,10 +444,189 @@ html{
 
 
 #projects{
+  padding-bottom: 150px;
+}
+.projectcontainer{
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+  margin-top: 2%;
 }
 
-.projectcontainer{
-  width: 80%;
+
+.projectbox{
+  margin: 30px 0;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  position: relative;
+}
+
+.projectboxleft{
+  border-radius: 10px;
+  width:60%;
+  max-width: 700px;
+  min-width: 700px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.projectboxleft img{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.projectboxright{
+  margin: auto 0;
+  height: 80%;
+  width: 40%;
+  min-width: 500px;
+  z-index: 10;
+  margin-left: auto;
+  position: relative;
+  box-shadow: -5px 1px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.projectboxright h2{
+  margin-top: 10px;
+  text-align: right;
+  font-size: 1.7em;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.projectboxright p{
+  font-size: 1.2em;
+  text-align: right;
+  font-weight: 600;
+  color: white;
+}
+
+.projectboxright .pills{
+  font-size: 1em;
+  justify-content: flex-end;
+}
+
+.links{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 70%;
+  margin-left: auto;
+  border-radius: 40px;
+  padding: 5px 20px;
+  box-shadow: -5px 1px 10px 0px rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.links a b{
+  font-size: 1.2em;
+  padding: 3px 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.links a b:hover{
+  background-color: black;
+  color: white;
+}
+
+.livedemobutton{
+  width: 110px;
+  justify-content: flex-end;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.4em;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color:rgb(0, 158, 217);
+  cursor: pointer;
+}
+
+.livedemobutton a{
+  transition: .5s;
+}
+
+.livedemobutton a:hover{
+  color: white;
+}
+
+@media only screen and (max-width: 880px){
+
+  .projectbox{
+    display: block;
+    height: auto;
+  }
+  .projectboxleft{
+    width: 80%;
+    margin-right: 20%;
+
+    min-width: auto;
+    max-height: 350px;
+    position: relative;
+  }
+  .projectboxright{
+    transform: translateY(-70px);
+    width: 70%;
+    padding: 5%;
+    min-width: auto;
+    position: relative;
+  }
+
+  .projectboxright h2{
+    font-size: 1.2em;
+    margin:0;
+  }
+
+  .projectboxright p{
+    font-size: 0.9em;
+    margin: 10px 0;
+  }
+
+  .projectboxright .pills{
+    font-size: 0.9em;
+  }
+
+  .links{
+    width: 90%;
+    margin: 0;
+    margin-top: 15px;
+    padding: 5px 5%;
+  }
+  .links a b{
+    font-size: 1em;
+  }
+
+  .livedemobutton{
+    margin-top: 20px;
+  }
+
+  .livedemobutton b{
+    font-size: .9em;
+    width: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* .projectcontainer{
+  width: 60%;
   margin: auto;
   max-width: 1200px;
   margin-top: 2%;
@@ -436,11 +638,12 @@ html{
   margin: 1%;
   float: left;
   border-radius: 10px;
-  /* transition: .5s; */
-  overflow: hidden;
-}
+  transition: .5s;
+} */
 
-.container {
+
+
+/* .container {
   position: relative;
   object-fit: contain;
   height: 100%;
@@ -452,7 +655,7 @@ html{
   height: 100%;
   opacity: 1;
 }
-/*
+
 .links{
   display: block;
   position: absolute;
@@ -478,7 +681,7 @@ html{
   margin-bottom: 2%;
   transition: .5s;
   cursor: pointer;
-} */
+}
 
 .fulllinks{
   display: block;
@@ -492,7 +695,6 @@ html{
   width: 95%;
   margin: 5px 2.5%;
   border-radius: 10px;
-
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
   opacity: 0;
@@ -569,8 +771,7 @@ html{
 }
 
 
-
-/* .container:hover .links{
+.container:hover .links{
   width: 40px;
   bottom: 2%;
   right: -100px;
@@ -581,7 +782,7 @@ html{
 
 .container:hover .links img{
   transition: .5s;
-} */
+}
 
 .container:hover .text{
   align-items: center;
@@ -606,7 +807,7 @@ html{
   margin-top: 5%;
   margin-bottom: 3%;
   transform: scaleY(1) translateY(0px);
-}
+} */
 
 
 
@@ -629,6 +830,20 @@ html{
   border-radius: 20px;
 }
 
+.pill.Redux{
+  background-color: purple;
+}
+.pill.ROR{
+  background-color:rgb(223, 0, 0);
+}
+.pill.Affinity{
+  background-color: rgb(0, 112, 153);
+}
+.pill.VanillaJS{
+  background-color: rgb(218, 190, 0);
+  color: black;
+}
+
 .viewmorebutton{
   justify-content: center;
   align-items: center;
@@ -637,7 +852,7 @@ html{
   font-size: 1.5em;
   font-weight: 700;
   margin: 2% 20%;
-  border-radius:10px;
+  border-radius:30px;
   letter-spacing: 3px;
   border:3px solid white;
   background-color: transparent;
@@ -661,11 +876,11 @@ html{
 
 
 #blogs{
-
+  padding-bottom: 120px;
 }
 
 .blogscontainer{
-  width: 70%;
+  width: 90%;
   margin: auto;
   max-width: 1200px;
 }
@@ -678,8 +893,11 @@ html{
 }
 
 .blogbox img{
+  height:250px;
+  object-fit: cover;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .blog{
@@ -719,8 +937,8 @@ html{
 
 
 #contact{
-  background-color: rgb(50, 50, 50);
   height: 700px;
+  padding-bottom: 150px;
   z-index: 200;
 }
 
@@ -881,6 +1099,19 @@ hr{
     max-width: 300px;
   }
 
+  .resumelink{
+    width: 100%;
+    margin: 50px 0;
+  }
+  .resumelink div{
+    font-size: 0.8em;
+  }
+
+  .resumelink div a{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .project{
     width: 100%;
     margin: 0;
@@ -901,11 +1132,20 @@ hr{
 
   .skillbox{
     width: 100%;
+    height: auto;
     margin-bottom: 5%;
+  }
+  .skillbox p{
+    font-size: 1.2em;
   }
   .blogbox{
     width: 100%;
     margin-bottom: 5%;
+  }
+
+  .viewmorebutton{
+    padding: 5px 20px;
+    font-size: 1.3em;
   }
 }
 
@@ -918,4 +1158,9 @@ hr{
     height: 300px;
   }
 
+  .skillbox{
+    width: 31%;
+    height: 260px;
+    margin-bottom: 5%;
+  }
 }

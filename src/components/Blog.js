@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Fade from 'react-reveal/Fade';
-import Blog1 from '../images/pokeball.png'
+
 import Pill from './Pill'
 
 class Blog extends Component {
@@ -15,14 +15,16 @@ class Blog extends Component {
     return (
       <Fade bottom>
         <div className="blogbox">
-          <img src={Blog1}/>
+          <a href={this.props.link} target="_blank" rel="noreferrer">
+            <img src={this.props.image} alt="img" rel="noreferrer"/>
+          </a>
           <div className="blog">
-            <b>Self In Ruby🔥</b>
+            <b>{this.props.name}</b>
             <div className="blogtags pills">
               {this.displayTags()}
             </div>
             <br/>
-            <small>Photo by Okusu on eskipaper.com</small>
+            <small>{this.props.imagesource}</small>
           </div>
         </div>
       </Fade>
