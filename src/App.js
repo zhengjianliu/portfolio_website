@@ -39,7 +39,7 @@ class App extends Component{
         {this.state.loading?
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
-          <div className="modebutton" onClick={this.lightmode}>{this.state.lightmode?"Light":"Dark"}</div>
+          <div className="modebutton" onClick={this.lightmode}>{this.state.lightmode?"Dark Mode":"Light Mode"}</div>
           <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
           <About open={this.state.open} />
           <Skills open={this.state.open} />

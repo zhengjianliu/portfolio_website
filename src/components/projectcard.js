@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import Pill from './Pill'
-import Arrowup from '../images/arrowup.png'
 import Fade from 'react-reveal/Fade';
-
 class ProjectCard extends Component {
 
   displayTags = (tags = this.props.tags) => {
@@ -12,12 +10,13 @@ class ProjectCard extends Component {
   }
 
   render() {
-    let image = "https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg"
     return (
       <Fade bottom>
         <div className="projectbox">
-          <div className="projectboxleft">
-          <img src={image}/>
+          <div className="projectboxleft" >
+            <a href={this.props.livedemo} target="_blank">
+              <img src={this.props.image} alt={this.props.name}/>
+            </a>
           </div>
           <div className="projectboxright">
             <h2>{this.props.name}</h2>
@@ -26,13 +25,15 @@ class ProjectCard extends Component {
               {this.displayTags()}
             </div>
             <div className="links">
-              <b>Video</b>
-              <b>Front End</b>
-              <b>Back End</b>
+              <a href={this.props.video} target="_blank"><b>Video</b></a>
+              <a href={this.props.frontend} target="_blank"><b>Front End</b></a>
+              <a href={this.props.backend} target="_blank"><b>Back End</b></a>
             </div>
-            <div className="livedemobutton">
-              <b>Live Demo</b>
-            </div>
+            <a href={this.props.livedemo} target="_blank">
+              <div className="livedemobutton">
+                <b>Live Demo</b>
+              </div>
+            </a>
           </div>
         </div>
       </Fade>
