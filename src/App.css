@@ -48,9 +48,11 @@ body::-webkit-scrollbar-thumb {
 
 .modebutton{
   position: fixed;
-  bottom: 10px;
-  right:10px;
-  z-index: 10000;
+  bottom: 0;
+  right:0;
+  border-top-left-radius:15px;
+  border: 1px solid rgb(136, 136, 136);
+  z-index: 1000000;
   font-weight: 700;
   font-size: 1.3em;
   color: rgba(71, 71, 71, 1);
@@ -58,7 +60,12 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 3px 10px;
   border: 2px solid rgba();
-  border-radius: 20px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.modebutton:hover{
+  opacity: 1;
 }
 
 html{
@@ -110,7 +117,7 @@ html{
   letter-spacing: 2px;
 }
 .base{
-  background-color: rgb(0, 158, 217);
+  background-color: rgb(80, 80, 80);
   width: 100%;
   position: absolute;
   bottom:0;
@@ -221,22 +228,32 @@ html{
 .infobox{
   height: 100vh;
   width: 60px;
-  background-color: white;
   top: 0;
-  right:20px;
+  right:10px;
   position: absolute;
   z-index: 20;
-  background-color: rgba(255, 255, 255, 0);
 }
 
 .infobox div{
-  bottom: 5vh;
+  bottom: 40px;
+  background: rgba(255, 255, 255, 0.2);
   position: absolute;
+  border-radius: 10px;
 }
 
 .infobox a img{
-  margin-top: 30px;
+  margin: 15px 0;
   width: 40px;
+}
+
+.info{
+  width: 350px;
+  padding: 5px;
+  padding-top: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -247,6 +264,7 @@ html{
   transition: .3s;
   border-radius: 50%;
   padding: 2px;
+  cursor: pointer;
 }
 
 .arrow:hover{
@@ -502,6 +520,7 @@ html{
   backdrop-filter: blur(5px);
   border-radius: 10px;
   padding: 10px 30px;
+  transition: .7s;
 }
 
 .projectboxright h2{
@@ -554,7 +573,7 @@ html{
 }
 
 .livedemobutton{
-  width: 110px;
+  width: 120px;
   justify-content: flex-end;
   margin-left: auto;
   text-align: center;
@@ -575,15 +594,19 @@ html{
 }
 
 @media only screen and (max-width: 880px){
-
+  .projectcontainer{
+    width: 95%;
+    margin: auto;
+    max-width: 1200px;
+    margin-top: 2%;
+  }
   .projectbox{
     display: block;
     height: auto;
   }
   .projectboxleft{
-    width: 80%;
-    margin-right: 20%;
-
+    width: 90%;
+    margin-right: 10%;
     min-width: auto;
     max-height: 350px;
     position: relative;
@@ -630,6 +653,30 @@ html{
   }
 }
 
+@media only screen and (max-width: 680px){
+  .projectcontainer{
+    width: 95%;
+    margin: auto;
+    max-width: 1200px;
+    margin-top: 2%;
+  }
+  .projectbox{
+    display: block;
+    height: auto;
+  }
+  .projectboxleft{
+    width: 100%;
+    min-width: auto;
+    max-height: 350px;
+    position: relative;
+  }
+  .projectboxright{
+    width: 90%;
+    transform: translateY(10px);
+    min-width: auto;
+    position: relative;
+  }
+}
 
 
 
@@ -1012,7 +1059,7 @@ hr{
 #footer{
   height: 30px;
   padding-top: 12px;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
@@ -1048,7 +1095,7 @@ hr{
   color:rgb(0, 158, 217);
   text-align: left;
   height: 50px;
-  padding-top: 100px;
+  padding-top: 70px;
   margin-top: 0;
   font-size: 2.5em;
   transition: .3s;
@@ -1105,6 +1152,9 @@ hr{
   .icons img{
     max-width: 50px;
   }
+  .aboutleft p b{
+    font-size: 1.2em;
+  }
   .aboutleft p{
     font-size: 1.1em;
     line-height: 1.4;
@@ -1114,6 +1164,11 @@ hr{
   }
   .aboutright img{
     max-width: 300px;
+  }
+
+
+  .skill p{
+    font-size: 1.1em !important;
   }
 
   .resumelink{
@@ -1137,14 +1192,31 @@ hr{
   }
 
   .projectcontainer{
-    width: 80%;
-    margin: 10%;
+    width: 90%;
+    margin: 5%;
   }
 
+  .blog b{
+    font-size: 1.4em;
+  }
+  .blog small{
+    font-size: 1em;
+  }
+  .blogtags.pills{
+    margin-top: 10px;
+  }
   .contactcontainer{
     padding-top: 15vh;
     width: 80%;
     margin: auto;
+  }
+
+  .contactcontainer h1{
+    font-size: 2.4em;
+  }
+
+  .contactcontainer p{
+    font-size: 1.3em;
   }
 
   .skillbox{

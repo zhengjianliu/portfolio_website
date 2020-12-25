@@ -20,7 +20,7 @@
 }
 
 
-.navbar#light li a{
+.navbar#light .items li b{
   color: rgba(0, 0, 0, 1);
 }
 
@@ -91,4 +91,9 @@
 .light hr{
   border: 1px solid rgb(80, 80, 80);
   transition: 1s;
+}
+
+
+.base.light{
+  background-color: rgb(0, 158, 217);
 }
