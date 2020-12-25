@@ -10,7 +10,6 @@ import {Link} from 'react-scroll'
 
 class Home extends Component{
   render(){
-    console.log(this.props.nightmode?"y":"n")
     var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
@@ -18,7 +17,7 @@ class Home extends Component{
         <div className={this.props.nightmode? "intro": "intro light"}>
           <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu.</span></h1>
           <h2>I'm a <span><Typewriter titles={titles}/></span></h2>
-          <Link to="about" smooth={true} duration={500} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
+          <Link to="projects" smooth={true} duration={500} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
       </div>
         <div className="infobox">
           <div>
