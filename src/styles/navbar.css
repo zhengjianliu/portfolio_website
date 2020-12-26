@@ -16,6 +16,11 @@
   transition: .5s;
 }
 
+.items li .active b{
+  color: rgb(0, 158, 217);
+  border-bottom: 4px solid rgb(0, 158, 217);
+  padding-bottom: 5px;
+}
 .navbar li b{
   padding-top: 3px;
   color: rgba(255, 255, 255, 1);
@@ -57,10 +62,14 @@ li{
 }
 
 .items li{
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
   font-size: 1.4em;
   font-weight: 700;
+}
+
+.items li b{
+  transition: 0.5s;
 }
 
 /* hamburger*/
@@ -159,15 +168,15 @@ li{
     margin-top: 7vh;
     padding-left: 10vw;
   }
-  .navbar li a{
+  .navbar li b{
     transition: 0.4s;
     color: rgba(0, 0, 0, 1);
   }
 
-  .navbar.active li a:hover{
+  .navbar.active li b:hover{
     letter-spacing: 5px;
-    padding-left: 3vw;
-    color: rgba(255, 255, 255, 1);
+    padding-left: 2vw;
+    color: rgb(0, 186, 255);
     transition: .4s;
   }
 
