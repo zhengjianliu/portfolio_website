@@ -199,7 +199,7 @@ html{
 }
 
 .intro h2{
-  font-size: 2em;
+  font-size: 1.5em;
   color: rgb(164, 164, 164);
   transition: 1s;
 }
@@ -654,7 +654,7 @@ html{
   }
 }
 
-@media only screen and (max-width: 680px){
+@media only screen and (max-width: 480px){
   .projectcontainer{
     width: 95%;
     margin: auto;
@@ -1002,13 +1002,13 @@ html{
 
 #contact{
   height: 700px;
-  padding-bottom: 150px;
+  min-height: 100vh;
   z-index: 200;
 }
 
 .contactcontainer{
   width: 100%;
-  padding-top: 100px;
+  padding-top: 20vh;
   margin-left: auto;
   margin-right: auto;
   display: block;
