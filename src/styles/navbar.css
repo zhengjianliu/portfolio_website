@@ -100,24 +100,6 @@ li{
     transform: scale(0);
   }
 
-  /* .navbar .items li:nth-child(1){
-    transform: scale(1);
-    transition: 0.5s;
-  } */
-
-  /* .info.active{
-    width: 100%;
-    margin-right: 0px;
-    transition: 1s;
-  }
-
-  .info.active a img{
-    width: 10%;
-    max-width: 55px;
-    padding-top: 3vh;
-    margin-right: 10%;
-    transition: 1s;
-  } */
 
   .items{
     width: 0px;
