@@ -11,14 +11,22 @@
   height: 60px;
   width: 100%;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   transition: .5s;
 }
 
+.navbar#light{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 .items li .active b{
   color: rgb(0, 158, 217);
-  border-bottom: 4px solid rgb(0, 158, 217);
+  padding-bottom: 5px;
+}
+
+.navbar#light .items li .active b{
+  color: rgb(0, 158, 217);
   padding-bottom: 5px;
 }
 .navbar li b{
@@ -29,17 +37,20 @@
 
 .navbar li b:hover{
   transition: 0.2s;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(0, 158, 217);
+}
+.navbar#light .items li b:hover{
+  transition: 0.2s;
+  color: rgb(0, 158, 217);
 }
 
 .hamburger li:nth-child(1){
-  background-color: white;
-  width: 15px;
+  background-color: rgb(249, 225, 68);
 }
 
 .hamburger li:nth-child(2){
   background-color: rgb(0, 158, 217);
-
+  width: 23px;
 }
 
 .hamburger li:nth-child(3){
@@ -81,7 +92,7 @@ li{
 
 .info{
   transition: .5s;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .info a img{
@@ -130,7 +141,7 @@ li{
     margin: 0px;
     border-radius: 0px;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
   }
 
@@ -152,7 +163,10 @@ li{
   }
   .navbar li b{
     transition: 0.4s;
-    color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+  .navbar li b:hover{
+    color: rgb(0, 158, 217);
   }
 
   .navbar.active li b:hover{
@@ -161,34 +175,40 @@ li{
     color: rgb(0, 186, 255);
     transition: .4s;
   }
+  #light.navbar.active li b:hover{
+    letter-spacing: 5px;
+    padding-left: 2vw;
+    color: rgb(0, 186, 255);
+    transition: .4s;
+  }
 
   .navbar.active li:nth-child(1){
-    transition: all .3s ease 0s;
+    transition: all .3s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(2){
-    transition: all 0.3s ease 0.1s;
+    transition: all 0.3s 0.05s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(3){
-    transition: all 0.3s ease 0.15s;
+    transition: all 0.3s 0.1s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(4){
-    transition: all 0.3s ease 0.2s;
+    transition: all 0.3s 0.15s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(5){
-    transition: all 0.3s ease 0.25s;
+    transition: all 0.3s 0.2s;
     transform: translateY(0%) scale(1);
   }
 
   .navbar.active li:nth-child(6){
-    transition: all 0.3s ease 0.3s;
+    transition: all 0.3s 0.25s;
     transform: translateY(0%) scale(1);
   }
 
@@ -196,25 +216,28 @@ li{
 
 
 
-  .hamburger.active li:nth-child(2){
-    opacity: 0;
-    transform: translateX(30px);
-    transition: .5s;
-  }
+
 
   .hamburger.active li:nth-child(1){
-    transform: rotate(45deg) translate(14px);
+    transform: rotate(405deg) translate(14px);
     height: 5px;
-    width: 40px;
-    background-color: black;
+    width: 50px;
+    background-color: rgb(129, 129, 129);
     border-radius: 20px;
     transition: 0.5s;
   }
+
+  .hamburger.active li:nth-child(2){
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 1s ease;
+  }
+
   .hamburger.active li:nth-child(3){
-    transform: rotate(-45deg) translate(14px);
+    transform: rotate(-405deg) translate(14px);
     height: 5px;
-    width: 40px;
-    background-color: black;
+    width: 50px;
+    background-color: rgb(129, 129, 129);
     border-radius: 20px;
     transition: .5s;
   }

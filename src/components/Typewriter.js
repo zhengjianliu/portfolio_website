@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
 
 
 
-export default class Typewriter extends Component{
+class Typewriter extends Component{
   state={
     titles:[],
     target:0,
@@ -56,7 +57,15 @@ export default class Typewriter extends Component{
   }
   render(){
     return(
-      <span>{this.state.typing}<b className="typerwriter">|</b></span>
+      <span>{this.state.typing}<b className={this.props.nightmode? "typerwriter": "typerwriter light"}>|</b></span>
     )
   }
 }
+
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default  connect(msp)(Typewriter)
