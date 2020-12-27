@@ -4,7 +4,9 @@ class Footer extends Component{
   render(){
     return(
       <div id="footer">
-        <p>Designed & Built by <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank">Zhengjian Liu</a></p>
+        <p>Designed & Built by
+          <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" rel="noreferrer" target="_blank"> Zhengjian Liu</a>
+        </p>
       </div>
     )
   }

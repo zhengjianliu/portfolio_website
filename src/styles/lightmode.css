@@ -1,0 +1,99 @@
+.App.light{
+  background-color: white;
+  transition: 1s;
+}
+
+.positionbg.light{
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.intro.light h1{
+  color: black;
+}
+
+.intro.light h2{
+  color: black;
+}
+
+.aboutleft.light p{
+  color: black;
+}
+
+
+.navbar#light .items li b{
+  color: rgba(0, 0, 0, 1);
+}
+
+
+
+.skillbox.light{
+  background-color: rgba(194, 194, 194, 0.2);
+}
+
+.skillbox.light .skill p{
+  color: black;
+}
+
+.projectboxright.light{
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.projectboxright.light h2{
+  color: black;
+}
+
+.projectboxright.light p{
+  color: black;
+}
+
+.projectboxright.light .links{
+  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.livedemobutton.light a{
+  color: white;
+  transition: .3s;
+}
+
+.livedemobutton.light a:hover{
+  color: black;
+}
+
+.viewmorebutton.light{
+  color: white;
+  background-color: rgb(0, 158, 217);
+  transition: .5s;
+}
+
+.viewmorebutton.light:hover{
+  background-color: black;
+  color: white;
+}
+
+.blog.light b{
+  color: black;
+}
+
+.blog.light small{
+  color: rgb(140, 140, 140);
+}
+
+.contactcontainer.light h1{
+  color: rgb(80, 80, 80);
+}
+
+.contactcontainer.light p{
+  color: rgb(80, 80, 80);
+}
+
+.light hr{
+  border: 1px solid rgb(80, 80, 80);
+  transition: 1s;
+}
+
+
+.base.light{
+  background-color: rgb(0, 158, 217);
+}

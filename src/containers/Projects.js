@@ -1,55 +1,78 @@
 import React, {Component} from 'react'
-import Project from '../components/Project'
-// import image from '../images/js.png'
+import Project from '../components/projectcard'
+import Fade from 'react-reveal/Fade';
+import Ziptrade from '../images/ziptrade.jpg'
+import Bestbey from '../images/bestbey.jpg'
+import Youplay from '../images/youplay.jpg'
+import Porfolio from '../images/portfolio.jpg'
+import {connect} from 'react-redux'
 
 class Projects extends Component {
 
   render() {
-    let image = "https://llandscapes-10674.kxcdn.com/wp-content/uploads/2019/07/lighting.jpg"
-    return (<div id="projects" className="fullpage">
-      <h1 className={this.props.open
-          ? "pagemark"
-          : "pagemark remove"}>Projects</h1>
+    return (
+      <div id="projects" className="fullpage">
       <div className="projectcontainer">
+        <h1 className={this.props.open? "pagemark":"pagemark remove"}>My Projects</h1>
         <Project
-          image={image}
+          image={Ziptrade}
           alt={"project image"}
           name={"Zip Trade"}
           tags={['ReactJS','Redux','ROR',]}
           desp="The second-hand marketing app provides a connection for sellers and buyers living in the same postal area."
+          frontend="https://github.com/zhengjianliu/ziptrade-frontend"
+          backend="https://github.com/zhengjianliu/ziptrade-backend"
+          livedemo="https://ziptrade.netlify.app"
+          video=""
           />
         <Project
-          image={image}
+          image={Bestbey}
           alt={"project image"}
           name={"BestBey"}
           tags={['ReactJS','Redux','ROR']}
-          desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
+          desp="Bestbey is an eCommerce store that brings you superior quality in electronics."
+          frontend="https://github.com/zhengjianliu/bestbey"
+          backend="https://github.com/zhengjianliu/bestbey-back"
+          livedemo="https://bestbey.netlify.app"
+          video=""
           />
         <Project
-          image={image}
+          image={Youplay}
           alt={"project image"}
           name={"YouPlay"}
           tags={['ROR','Affinity']}
           desp="Ruby on Rails full stack application that allows users to search, view, comment on videos online"
+          frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
+          backend="https://github.com/zhengjianliu/YouPlay"
+          livedemo="https://you-play-heroku.herokuapp.com"
+          video=""
           />
         <Project
-          image={image}
+          image={Porfolio}
           alt={"project image"}
-          name={"TikTok Clone"}
-          tags={['Vanilla JS','ROR','Affinity']}
-          desp="The web version of TikTok uses YouTube API to generate video feed and provides a user experience similar to TikTok"
-            />
-            <Project
-              image={image}
-              alt={"project image"}
-              name={"Portfolio Website"}
-              tags={['ReactJS','Affinity']}
-              desp="wqiufi wqjevwqiv wq riuewqgr qwuwr wqg rqw9g  iwqe i"
-                />
+          name={"Portfolio Website"}
+          tags={['ReactJS','Redux','Affinity']}
+          desp="I designed the personal homepage and implemented the dark & light mode features to it."
+          frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
+          backend=""
+          livedemo=""
+          video=""
+          />
+        <Fade bottom>
+          <a href="https://github.com/zhengjianliu?tab=repositories" target="_blank" rel="noreferrer">
+            <button className={this.props.nightmode?"viewmorebutton":"viewmorebutton light"}>View More</button>
+          </a>
+        </Fade>
       </div>
-
-    </div>)
+    </div>
+    )
   }
 }
 
-export default Projects
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default (connect)(msp)(Projects)

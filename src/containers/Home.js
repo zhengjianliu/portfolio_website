@@ -5,17 +5,19 @@ import Medium from '../images/medium.png'
 import Email from '../images/email.png'
 import Arrow from '../images/arrow1.png'
 import Typewriter from '../components/Typewriter'
+import {connect} from 'react-redux'
+import {Link} from 'react-scroll'
 
 class Home extends Component{
   render(){
-    var titles = ['full-stack developer', 'problem solver 🤔'];
+    var titles = ['Full Stack Developer', 'Problem Solver 🤔'];
     return(
       <div id="home" className="fullpage">
-        <div className="positionbg">Full-Stack<br/>Web Developer</div>
-        <div className="intro">
-          <h1>👋 Hey there,<br/><span>I'm Zhengjian Liu.</span><br/>Nice to meet ya!</h1>
-          <h2>I'm a <br/><span><Typewriter titles={titles}/></span></h2>
-          <a href="#about" onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></a>
+        <div className={this.props.nightmode? "positionbg": "positionbg light"}>Full Stack<br/>Web<br/>Developer</div>
+        <div className={this.props.nightmode? "intro": "intro light"}>
+          <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu.</span></h1>
+          <h2>I'm a <span><Typewriter titles={titles}/></span></h2>
+          <Link to="projects" smooth={true} duration={500} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
       </div>
         <div className="infobox">
           <div>
@@ -30,4 +32,10 @@ class Home extends Component{
   }
 }
 
-export default Home
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Home)
