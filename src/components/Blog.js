@@ -23,6 +23,8 @@ class Blog extends Component {
             <div className="blogtags pills">
               {this.displayTags()}
             </div>
+            <br/>
+            <small>{this.props.imagesource}</small>
           </div>
         </div>
       </Fade>

@@ -21,7 +21,8 @@ class Blogs extends Component{
       tags={blog.categories}
       name={blog.title}
       image={blog.thumbnail}
-      link={blog.link}/>)
+      link={blog.link}
+      />)
   }
 
   render(){

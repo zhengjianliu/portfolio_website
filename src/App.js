@@ -38,7 +38,7 @@ class App extends Component{
     var currentTime = new Date()
     let hours = currentTime.getHours()
     //  between 6 ~ 17   6:00am ~ 5:00pm lightMode is ON
-    if(hours >17 || hours <6){
+    if(hours >=17 || hours <6){
       this.props.darkMode()
     }else{
       this.props.lightMode()
@@ -51,7 +51,7 @@ class App extends Component{
 
   render(){
     return (
-      <div className={this.props.nightmode?"App": "App light"}>
+      <div className={this.props.nightmode?"App":"App light"}>
         {!this.state.loading?
         <Loading finishloading={this.finishloading}/>
         :
