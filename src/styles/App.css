@@ -58,10 +58,6 @@ a{
   opacity: 1;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 .fullpage{
   width:100%;
   height: auto;
@@ -147,7 +143,7 @@ html{
   font-size: 2.5em;
   line-height: 1.3;
   position: absolute;
-  top: 10vh;
+  top: 15vh;
   left: 5vw;
 }
 
@@ -292,7 +288,7 @@ html{
 
 #about{
   z-index: 20;
-  padding-bottom: 120px;
+  padding-top: 50px;
 }
 
 
@@ -823,15 +819,14 @@ html{
 
 
 #contact{
-  padding-top: 150px;
-  height: 700px;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 200;
+  padding-bottom: 5vh;
 }
 
 .contactcontainer{
-  width: 100%;
   padding-top: 20vh;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -973,14 +968,14 @@ hr{
     font-size: 13em;
   }
   .intro{
-    top: 20vh;
+    top: 15vh;
   }
   .intro h1{
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.6;
   }
   .intro h2{
-    font-size: 0.85em;
+    font-size: 0.8em;
     line-height: 1.6;
   }
 
@@ -1001,9 +996,10 @@ hr{
   }
   .aboutleft p b{
     font-size: 1.2em;
+    line-height: 1.2;
   }
   .aboutleft p{
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.4;
   }
   .aboutright{
@@ -1018,17 +1014,25 @@ hr{
     font-size: 1.1em !important;
   }
 
-  .resumelink{
-    width: 100%;
-    margin: 50px 0;
-  }
   .resumelink div{
-    font-size: 0.8em;
+    font-size: 1.2em;
+    display: block;
   }
 
   .resumelink div a{
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0;
+    width: 230px;
+    margin-left: auto;
+    padding: 5px 0px;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.3s;
+  }
+
+  .resumelink div a:hover{
+    background-color: black;
   }
 
   .project{
@@ -1043,6 +1047,18 @@ hr{
     margin: 5%;
   }
 
+  .blogbox{
+    width: 30%;
+    margin-bottom: 4%;
+    float: left;
+    display: block;
+    height: auto;
+  }
+
+  .blogbox a img{
+    height: 200px;
+  }
+
   .blog b{
     font-size: 1.4em;
   }
@@ -1053,16 +1069,10 @@ hr{
     margin-top: 10px;
   }
 
-  .blogbox{
-    width: 30%;
-    margin: 0% 1.5%;
-    float: left;
-    display: block;
-    height: auto;
+  #contact{
+    height: 100vh;
   }
-
   .contactcontainer{
-    padding-top: 15vh;
     width: 80%;
     margin: auto;
   }
@@ -1073,6 +1083,10 @@ hr{
 
   .contactcontainer p{
     font-size: 1.3em;
+  }
+
+  .scrollup{
+    margin-top: 60px;
   }
 
   .skillbox{
@@ -1091,6 +1105,17 @@ hr{
   .viewmorebutton{
     padding: 5px 20px;
     font-size: 1.3em;
+  }
+  .infobox{
+    width: 40px;
+  }
+  .infobox div a img{
+    width: 30px;
+    margin: 7px 0;
+  }
+
+  .pagemark{
+    padding-top: 0;
   }
 }
 

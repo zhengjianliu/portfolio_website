@@ -13,6 +13,7 @@
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: .5s;
 }
 
@@ -155,10 +156,9 @@ li{
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin:0;
-    font-size: 40pt;
+    margin-top: 6vh;
+    font-size: 2.5em;
     transform: translateY(-100%) scale(0);
-    margin-top: 7vh;
     padding-left: 10vw;
   }
   .navbar li b{
