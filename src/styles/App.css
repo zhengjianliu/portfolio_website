@@ -58,10 +58,6 @@ a{
   opacity: 1;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 .fullpage{
   width:100%;
   height: auto;

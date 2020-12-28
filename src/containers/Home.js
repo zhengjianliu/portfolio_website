@@ -16,7 +16,7 @@ class Home extends Component{
         <div className={this.props.nightmode? "intro": "intro light"}>
           <h1>👋 Hey there!<br/>My name is <br/><span>Zhengjian Liu</span></h1>
           <h2><span>I'm <Typewriter titles={['a Full Stack Developer', 'a Problem Solver 🤔','Ready To Work With You']}/></span></h2>
-          <Link to="projects" smooth={true} duration={0} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
+          <Link to="projects" smooth={true} duration={500} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
       </div>
         <div className="infobox">
           <div>
