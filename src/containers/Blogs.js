@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Blog from '../components/Blog'
+import Fade from 'react-reveal/Fade';
 
 class Blogs extends Component{
   state={
@@ -32,7 +33,7 @@ class Blogs extends Component{
           ?
           <div id="blogs" className="fullpage">
             <div className="blogscontainer">
-              <h1 className={this.props.open?"pagemark":"pagemark remove"}>My Blogs</h1>
+            <Fade bottom duration={1000} delay={50}><h1 className="pagemark">My Blogs</h1></Fade>
               {this.renderBlogs()}
             </div>
           </div>

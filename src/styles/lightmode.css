@@ -1,99 +1,102 @@
-.App.light{
+.App.light {
   background-color: white;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
-.positionbg.light{
+.positionbg.light {
   color: rgba(0, 0, 0, 0.05);
 }
 
-.intro.light h1{
+.intro.light h1 {
   color: black;
 }
 
-.intro.light h2{
+.intro.light h2 {
   color: black;
 }
 
-.aboutleft.light p{
+.aboutleft.light p {
   color: black;
 }
 
-
-.navbar#light .items li b{
-  color: rgba(0, 0, 0, 1);
+.navbar#light .items li b {
+  color: black;
 }
 
-
-
-.skillbox.light{
+.skillbox.light {
   background-color: rgba(194, 194, 194, 0.2);
 }
 
-.skillbox.light .skill p{
+.skillbox.light .skill p {
   color: black;
 }
 
-.projectboxright.light{
+.projectboxright.light {
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 
-.projectboxright.light h2{
+.projectboxright.light h2 {
   color: black;
 }
 
-.projectboxright.light p{
+.projectboxright.light p {
   color: black;
 }
 
-.projectboxright.light .links{
-  box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+.projectboxright.light .links {
+  -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.livedemobutton.light a{
+.livedemobutton.light a {
   color: white;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
-.livedemobutton.light a:hover{
+.livedemobutton.light:hover a{
   color: black;
 }
 
-.viewmorebutton.light{
+.viewmorebutton.light {
   color: white;
-  background-color: rgb(0, 158, 217);
+  background-color: #009ed9;
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
-.viewmorebutton.light:hover{
+.viewmorebutton.light:hover {
   background-color: black;
   color: white;
 }
 
-.blog.light b{
+.blog.light b {
   color: black;
 }
 
-.blog.light small{
-  color: rgb(140, 140, 140);
+.blog.light small {
+  color: #8c8c8c;
 }
 
-.contactcontainer.light h1{
-  color: rgb(80, 80, 80);
+.contactcontainer.light h1 {
+  color: #505050;
 }
 
-.contactcontainer.light p{
-  color: rgb(80, 80, 80);
+.contactcontainer.light p {
+  color: #505050;
 }
 
-.light hr{
-  border: 1px solid rgb(80, 80, 80);
+.light hr {
+  border: 1px solid #505050;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
-
-.base.light{
-  background-color: rgb(0, 158, 217);
+.base.light {
+  background-color: #009ed9;
 }
+/*# sourceMappingURL=style.css.map */

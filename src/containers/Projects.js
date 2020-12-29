@@ -13,7 +13,7 @@ class Projects extends Component {
     return (
       <div id="projects" className="fullpage">
       <div className="projectcontainer">
-        <h1 className="pagemark">My Projects</h1>
+      <Fade bottom duration={1000} delay={50}><h1 className="pagemark">My Projects</h1></Fade>
         <Project
           image={Ziptrade}
           alt={"project image"}
@@ -58,7 +58,7 @@ class Projects extends Component {
           livedemo=""
           video=""
           />
-        <Fade bottom>
+        <Fade bottom duration={1000} delay={200}>
           <a href="https://github.com/zhengjianliu?tab=repositories" target="_blank" rel="noreferrer">
             <button className={this.props.nightmode?"viewmorebutton":"viewmorebutton light"}>View More</button>
           </a>
