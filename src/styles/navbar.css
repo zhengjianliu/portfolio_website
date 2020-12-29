@@ -1,245 +1,267 @@
 /* Navbar */
-.navbarcontainer{
+.navbarcontainer {
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   z-index: 100000;
 }
-.navbar{
+
+.navbar {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 60px;
   width: 100%;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  -webkit-transition: .5s;
   transition: .5s;
 }
 
-.navbar#light{
+.navbar#light {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.items li .active b{
-  color: rgb(0, 158, 217);
+.items li .active b {
+  color: #009ed9;
   padding-bottom: 5px;
 }
 
-.navbar#light .items li .active b{
-  color: rgb(0, 158, 217);
+.navbar#light .items li .active b {
+  color: #009ed9;
   padding-bottom: 5px;
 }
-.navbar li b{
+
+.navbar li b {
   padding-top: 3px;
-  color: rgba(255, 255, 255, 1);
+  color: white;
   cursor: pointer;
 }
 
-.navbar li b:hover{
+.navbar li b:hover {
+  -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: rgb(0, 158, 217);
-}
-.navbar#light .items li b:hover{
-  transition: 0.2s;
-  color: rgb(0, 158, 217);
+  color: #009ed9;
 }
 
-.hamburger li:nth-child(1){
-  background-color: rgb(249, 225, 68);
+.navbar#light .items li b:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #009ed9;
 }
 
-.hamburger li:nth-child(2){
-  background-color: rgb(0, 158, 217);
+.hamburger li:nth-child(1) {
+  background-color: #f9e144;
+}
+
+.hamburger li:nth-child(2) {
+  background-color: #009ed9;
   width: 23px;
 }
 
-.hamburger li:nth-child(3){
-  background-color: rgb(0, 0, 0);
+.hamburger li:nth-child(3) {
+  background-color: black;
   width: 15px;
   height: 4px;
-
 }
-.items{
+
+.items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   width: 60%;
   height: 50px;
   padding-top: 15px;
   list-style-type: none;
-
 }
-li{
+
+li {
   list-style-type: none;
 }
 
-.items li{
+.items li {
   margin-left: 3%;
   margin-right: 3%;
   font-size: 1.4em;
   font-weight: 700;
 }
 
-.items li b{
+.items li b {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 /* hamburger*/
-.hamburger{
+.hamburger {
   display: none;
   cursor: pointer;
 }
 
-
-.info{
+.info {
+  -webkit-transition: .5s;
   transition: .5s;
   margin-top: 50px;
 }
 
-.info a img{
+.info a img {
   width: 40px;
   padding: 0 20px;
 }
 
-
-
-@media only screen and (max-width: 880px){
-  .info a img{
-    width: 40px;
-    padding: 0 15px;
+@media only screen and (max-width: 880px) {
+  .info{
+    width:250px !important;
   }
-  .navbar .items li:nth-child(n+1){
-    transform: scale(0);
+  .info a img {
+    width: 35px;
+    padding: 0 10px;
   }
-
-
-  .items{
+  .navbar .items li:nth-child(n+1) {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .items {
     width: 0px;
-    padding-left:0;
+    padding-left: 0;
     padding-right: 0;
     margin-right: 0;
   }
-
-  .hamburger{
+  .hamburger {
     display: block;
-    right:20px;
-    top:15px;
+    right: 20px;
+    top: 15px;
     position: absolute;
     cursor: pointer;
+    -webkit-transition: .5s;
     transition: .5s;
   }
-
-  .line{
+  .line {
     width: 30px;
     height: 3px;
-    margin:6px;
+    margin: 6px;
     background: white;
+    -webkit-transition: 1s;
     transition: 1s;
   }
-
-  .navbar.active{
+  .navbar.active {
     width: 100%;
     margin: 0px;
     border-radius: 0px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
   }
-
-  .navbar.active .items{
+  .navbar.active .items {
     display: block;
     margin-top: 5vh;
   }
-
-  .navbar.active .items li{
+  .navbar.active .items li {
     display: block;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 6vh;
     font-size: 2.5em;
-    transform: translateY(-100%) scale(0);
+    -webkit-transform: translateY(-100%) scale(0);
+            transform: translateY(-100%) scale(0);
     padding-left: 10vw;
   }
-  .navbar li b{
+  .navbar li b {
+    -webkit-transition: 0.4s;
     transition: 0.4s;
-    color: rgba(255, 255, 255, 1);
+    color: white;
   }
-  .navbar li b:hover{
-    color: rgb(0, 158, 217);
+  .navbar li b:hover {
+    color: #009ed9;
   }
-
-  .navbar.active li b:hover{
+  .navbar.active li b:hover {
     letter-spacing: 5px;
     padding-left: 2vw;
-    color: rgb(0, 186, 255);
+    color: #00baff;
+    -webkit-transition: .4s;
     transition: .4s;
   }
-  #light.navbar.active li b:hover{
+  #light.navbar.active li b:hover {
     letter-spacing: 5px;
     padding-left: 2vw;
-    color: rgb(0, 186, 255);
+    color: #00baff;
+    -webkit-transition: .4s;
     transition: .4s;
   }
-
-  .navbar.active li:nth-child(1){
+  .navbar.active li:nth-child(1) {
+    -webkit-transition: all .3s;
     transition: all .3s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-  .navbar.active li:nth-child(2){
+  .navbar.active li:nth-child(2) {
+    -webkit-transition: all 0.3s 0.05s;
     transition: all 0.3s 0.05s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-  .navbar.active li:nth-child(3){
+  .navbar.active li:nth-child(3) {
+    -webkit-transition: all 0.3s 0.1s;
     transition: all 0.3s 0.1s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-  .navbar.active li:nth-child(4){
+  .navbar.active li:nth-child(4) {
+    -webkit-transition: all 0.3s 0.15s;
     transition: all 0.3s 0.15s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-  .navbar.active li:nth-child(5){
+  .navbar.active li:nth-child(5) {
+    -webkit-transition: all 0.3s 0.2s;
     transition: all 0.3s 0.2s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-  .navbar.active li:nth-child(6){
+  .navbar.active li:nth-child(6) {
+    -webkit-transition: all 0.3s 0.25s;
     transition: all 0.3s 0.25s;
-    transform: translateY(0%) scale(1);
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
   }
-
-
-
-
-
-
-
-  .hamburger.active li:nth-child(1){
-    transform: rotate(405deg) translate(14px);
+  .hamburger.active li:nth-child(1) {
+    -webkit-transform: rotate(405deg) translate(14px);
+            transform: rotate(405deg) translate(14px);
     height: 5px;
     width: 50px;
-    background-color: rgb(129, 129, 129);
+    background-color: #818181;
     border-radius: 20px;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-
-  .hamburger.active li:nth-child(2){
+  .hamburger.active li:nth-child(2) {
     opacity: 0;
-    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    -webkit-transition: 1s ease;
     transition: 1s ease;
   }
-
-  .hamburger.active li:nth-child(3){
-    transform: rotate(-405deg) translate(14px);
+  .hamburger.active li:nth-child(3) {
+    -webkit-transform: rotate(-405deg) translate(14px);
+            transform: rotate(-405deg) translate(14px);
     height: 5px;
     width: 50px;
-    background-color: rgb(129, 129, 129);
+    background-color: #818181;
     border-radius: 20px;
+    -webkit-transition: .5s;
     transition: .5s;
   }
-
 }

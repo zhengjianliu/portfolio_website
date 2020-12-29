@@ -8,6 +8,7 @@ import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
 import Fade from 'react-reveal/Fade';
 import {connect} from 'react-redux'
+import { cascade } from 'react-reveal/globals'
 
 class About extends Component{
   render(){
@@ -16,15 +17,15 @@ class About extends Component{
 
         <div className="aboutcontainer">
           <div className={this.props.nightmode?"aboutleft":"aboutleft light"}>
-            <h1 className={this.props.open?"pagemark":"pagemark remove"}>About Me</h1>
-            <Fade bottom duration={1000} delay={200} cascade>
+          <Fade bottom duration={1000} delay={50}><h1 className="pagemark">About Me</h1></Fade>
+            <Fade bottom duration={1000} delay={100}>
               <p>
               <b>Hi, my name is Zhengjian Liu,
               <br/> a software Engineer (Full stack web developer) with a passion to build exceptional websites,
               applications or anything in between.</b>
               </p>
               </Fade>
-              <Fade bottom>
+              <Fade bottom duration={1000} delay={150}>
               <p>
               <br/>
               <br/>
@@ -37,7 +38,7 @@ class About extends Component{
               Here are a few technologies I've been working with recently:<br/>
             </p>
             </Fade>
-            <Fade bottom cascade>
+            <Fade bottom duration={1000} delay={300} cascade>
             <div className="icons">
               <img src={Html} alt="html icon"/>
               <img src={Css} alt="Css icon"/>
@@ -48,7 +49,7 @@ class About extends Component{
               <img src={Rubyonrails} alt="Rubyonrails icon" className="smallericon"/>
             </div>
             </Fade>
-            <Fade bottom cascade>
+            <Fade bottom duration={1000} delay={300} cascade>
               <div className="resumelink">
                 <div>
                   <a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer">View Resume</a>

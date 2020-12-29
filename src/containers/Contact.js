@@ -12,20 +12,24 @@ class Contact extends Component{
     return(
 
         <div id="contact" className="fullpage">
-          <Fade bottom duration={1000} delay={200} cascade>
+          <Fade bottom duration={1000} delay={100} cascade>
             <div className={this.props.nightmode?"contactcontainer":"contactcontainer light"}>
               <h1>Get In Touch</h1>
               <span className={this.props.nightmode?null:"light"}><hr/></span>
               <p>Please feel free to say Hi 👋! or contact me if you have any question.
                 <br/>I'll try my best to get back to you! 😊</p>
-              <a href="mailto:comezheng@gmail.com">Contact me</a>
+              <Fade bottom duration={1000} delay={200}>
+                <a href="mailto:comezheng@gmail.com">Contact me</a>
+              </Fade>
             </div>
-            <div className="info">
-              <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
-              <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
-              <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
-              <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
-            </div>
+            <Fade bottom duration={1000} delay={300}>
+              <div className="info">
+                <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
+                <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
+                <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
+                <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
+              </div>
+            </Fade>
           </Fade>
             <img className="scrollup" src={Arrow} alt="scroll up" onClick={()=>scroll.scrollToTop()}/>
         </div>
