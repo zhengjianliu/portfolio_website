@@ -6,9 +6,8 @@ import Redux from '../images/redux.png'
 import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 import {connect} from 'react-redux'
-import { cascade } from 'react-reveal/globals'
 
 class About extends Component{
   render(){
