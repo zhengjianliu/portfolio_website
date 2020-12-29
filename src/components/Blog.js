@@ -13,7 +13,7 @@ class Blog extends Component {
 
   render() {
     return (
-      <Fade bottom>
+      <Fade bottom duration={1000} delay={200}>
         <div className="blogbox">
           <a href={this.props.link} target="_blank" rel="noreferrer">
             <img src={this.props.image} alt="img" rel="noreferrer"/>

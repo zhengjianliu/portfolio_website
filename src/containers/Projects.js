@@ -13,7 +13,7 @@ class Projects extends Component {
     return (
       <div id="projects" className="fullpage">
       <div className="projectcontainer">
-        <h1 className={this.props.open? "pagemark":"pagemark remove"}>My Projects</h1>
+        <h1 className="pagemark">My Projects</h1>
         <Project
           image={Ziptrade}
           alt={"project image"}

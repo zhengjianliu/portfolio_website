@@ -12,7 +12,7 @@ class Contact extends Component{
     return(
 
         <div id="contact" className="fullpage">
-          <Fade bottom>
+          <Fade bottom duration={1000} delay={200} cascade>
             <div className={this.props.nightmode?"contactcontainer":"contactcontainer light"}>
               <h1>Get In Touch</h1>
               <span className={this.props.nightmode?null:"light"}><hr/></span>

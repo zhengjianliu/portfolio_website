@@ -9,14 +9,16 @@ import Css from '../images/css.png'
 import Skill from '../components/Skill'
 import Affinityphoto from '../images/affinity-photo.png'
 import Github from '../images/github.png'
+import Fade from 'react-reveal/Fade';
 
 class Skills extends Component{
   render(){
     return(
       <div id="skills" className="fullpage">
-
         <div className="skillscontainer">
+          <Fade bottom duration={1000} delay={200}>
           <h1 className={this.props.open?"pagemark":"pagemark remove"}>My Skills</h1>
+          </Fade>
           <Skill
             topic={"A solid foundation"}
             icons={[Html, Css, Javascript]}
