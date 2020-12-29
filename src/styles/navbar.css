@@ -117,9 +117,12 @@ li {
 }
 
 @media only screen and (max-width: 880px) {
+  .info{
+    width:250px !important;
+  }
   .info a img {
-    width: 40px;
-    padding: 0 15px;
+    width: 35px;
+    padding: 0 10px;
   }
   .navbar .items li:nth-child(n+1) {
     -webkit-transform: scale(0);
@@ -262,4 +265,3 @@ li {
     transition: .5s;
   }
 }
-/*# sourceMappingURL=style.css.map */
