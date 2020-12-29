@@ -12,7 +12,7 @@ class Skill extends Component {
 
   render() {
     return (
-      <Fade bottom>
+      <Fade bottom duration={1000} delay={200}>
         <div className={this.props.nightmode?"skillbox":"skillbox light"}>
           <b>{this.props.topic}</b>
           <div className="skill">

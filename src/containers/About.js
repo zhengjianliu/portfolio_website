@@ -17,7 +17,7 @@ class About extends Component{
         <div className="aboutcontainer">
           <div className={this.props.nightmode?"aboutleft":"aboutleft light"}>
             <h1 className={this.props.open?"pagemark":"pagemark remove"}>About Me</h1>
-            <Fade bottom>
+            <Fade bottom duration={1000} delay={200} cascade>
               <p>
               <b>Hi, my name is Zhengjian Liu,
               <br/> a software Engineer (Full stack web developer) with a passion to build exceptional websites,

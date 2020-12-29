@@ -605,7 +605,7 @@ a{
     position: relative;
   }
   .projectboxright{
-    transform: translateY(-70px);
+    margin-top: -70px;
     width: 70%;
     padding: 5%;
     min-width: auto;
@@ -664,6 +664,7 @@ a{
     position: relative;
   }
   .projectboxright{
+    margin-top: 3%;
     width: 90%;
     transform: translateY(10px);
     min-width: auto;
@@ -1131,6 +1132,5 @@ hr{
   .skillbox{
     width: 31%;
     height: 260px;
-    margin-bottom: 5%;
   }
 }

@@ -13,7 +13,7 @@ class ProjectCard extends Component {
 
   render() {
     return (
-      <Fade bottom>
+      <Fade bottom delay={200} duration={1000} cascade>
         <div className="projectbox">
           <div className="projectboxleft" >
             <a href={this.props.livedemo} target="_blank" rel="noreferrer">
