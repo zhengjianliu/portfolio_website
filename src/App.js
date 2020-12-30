@@ -15,6 +15,9 @@ class App extends Component{
   state={
     open: true,
     loading:false,
+    height:0,
+    currentHeight:0,
+    progress:0,
   }
 
   clickHandler = () =>{
@@ -24,6 +27,7 @@ class App extends Component{
   closeHandler = () =>{
     this.setState({open:true})
   }
+
   finishloading= (percentage) =>{
     if(percentage>100){
       this.setState({loading:true})
@@ -45,11 +49,28 @@ class App extends Component{
     }
   }
 
+  // checkscroll = () =>{
+  //   window.addEventListener('scroll',e=>{
+  //     let height = document.body.scrollHeight
+  //     let currentHeight = window.scrollY
+  //     this.setState({height:height, currentHeight: currentHeight})
+  //     if (currentHeight>20){
+  //       this.setState({progress: parseInt(currentHeight/(height-1000)*100)})
+  //     }else if (currentHeight<20){
+  //       this.setState({progress:0})
+  //     }else if (currentHeight >90){
+  //       this.setState({progress:100})
+  //     }
+  //   })
+  // }
+
   componentDidMount(){
     this.checktime()
+    // this.checkscroll()    
   }
 
   render(){
+    console.log(this.state)
     return (
       <div className={this.props.nightmode?"App":"App light"}>
         {!this.state.loading?
@@ -58,8 +79,8 @@ class App extends Component{
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
           <div className="modebutton" onClick={this.nightmode}>{this.props.nightmode?"Dark On":"Dark Off"}</div>
-          <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler}/>
-          <About open={this.state.open} />
+          <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler} progress={this.state.progress}/>
+          <About open={this.state.open}/>
           <Skills open={this.state.open} />
           <Projects open={this.state.open}/>
           <Blogs open={this.state.open}/>

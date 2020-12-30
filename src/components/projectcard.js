@@ -11,6 +11,14 @@ class ProjectCard extends Component {
     })
   }
 
+  checksource = (link) =>{
+    if(link.length>0){
+      return true
+    }else{
+      return false
+    }
+  }
+
   render() {
     return (
       <Fade bottom delay={200} duration={1000} cascade>
@@ -27,9 +35,9 @@ class ProjectCard extends Component {
               {this.displayTags()}
             </div>
             <div className="links">
-              <a href={this.props.video} target="_blank" rel="noreferrer"><b>Video</b></a>
-              <a href={this.props.frontend} target="_blank" rel="noreferrer"><b>Front End</b></a>
-              <a href={this.props.backend} target="_blank" rel="noreferrer"><b>Back End</b></a>
+              {this.checksource(this.props.video)?<a href={this.props.video} target="_blank" rel="noreferrer"><b>Video</b></a>:null}
+              {this.checksource(this.props.frontend)?<a href={this.props.frontend} target="_blank" rel="noreferrer"><b>Front End</b></a>:null}
+              {this.checksource(this.props.backend)?<a href={this.props.backend} target="_blank" rel="noreferrer"><b>Back End</b></a>:null}
             </div>
             <div className={this.props.nightmode?"livedemobutton":"livedemobutton light"}>
               <a href={this.props.livedemo} target="_blank" rel="noreferrer"><b>Live Demo</b></a>
