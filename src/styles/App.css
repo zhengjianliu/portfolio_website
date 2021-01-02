@@ -372,6 +372,17 @@ a {
   padding-top: 50px;
 }
 
+/* .progressbar{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 1px;
+  z-index: 100;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 10000;
+} */
+
 .aboutcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,17 +660,12 @@ a {
 }
 
 .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 10px;
-  width: 70%;
-  margin-left: auto;
+  display: block;
+  right: 6%;
+  position: absolute;
   border-radius: 40px;
-  padding: 5px 20px;
+  padding: 7px 1px;
   -webkit-box-shadow: -5px 1px 10px 0px rgba(255, 255, 255, 0.4);
           box-shadow: -5px 1px 10px 0px rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0.6);
@@ -669,6 +675,9 @@ a {
   transition: 1s;
 }
 
+.links a{
+  padding: 0 5px;
+}
 .links a b {
   font-size: 1.2em;
   padding: 3px 10px;
@@ -690,13 +699,14 @@ a {
           justify-content: flex-end;
   margin-left: auto;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 60px;
   font-size: 1.4em;
   padding: 5px 20px;
   border-radius: 20px;
   background-color: #009ed9;
   cursor: pointer;
 }
+
 
 .livedemobutton a {
   -webkit-transition: .5s;
@@ -743,17 +753,18 @@ a {
   .projectboxright .pills {
     font-size: 0.9em;
   }
-  .links {
-    width: 90%;
-    margin: 0;
-    margin-top: 15px;
-    padding: 5px 5%;
+
+  .links{
+    padding: 7px 0;
+  }
+  .links a{
+    padding: 0 5px;
   }
   .links a b {
     font-size: 1em;
   }
   .livedemobutton {
-    margin-top: 20px;
+    margin-top: 55px;
   }
   .livedemobutton b {
     font-size: .9em;

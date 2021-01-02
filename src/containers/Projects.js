@@ -23,7 +23,7 @@ class Projects extends Component {
           frontend="https://github.com/zhengjianliu/ziptrade-frontend"
           backend="https://github.com/zhengjianliu/ziptrade-backend"
           livedemo="https://ziptrade.netlify.app"
-          video=""
+          video="https://youtu.be/woQ9vWkBT3w"
           />
         <Project
           image={Bestbey}

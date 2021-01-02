@@ -6,6 +6,7 @@ class Navbar extends Component{
   render(){
     return(
       <div className="navbarcontainer" >
+        {/* <span className="progressbar" style={{ height: `${ this.props.progress}%` }}></span> */}
         <div id={this.props.nightmode?null:"light"} className={this.props.open?"navbar":"navbar active"}>
           <ul className="items" onClick={this.props.closeHandler}>
             <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>
