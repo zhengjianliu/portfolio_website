@@ -66,11 +66,10 @@ class App extends Component{
 
   componentDidMount(){
     this.checktime()
-    // this.checkscroll()    
+    // this.checkscroll()
   }
 
   render(){
-    console.log(this.state)
     return (
       <div className={this.props.nightmode?"App":"App light"}>
         {!this.state.loading?

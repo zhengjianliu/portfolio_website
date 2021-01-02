@@ -52,10 +52,10 @@ class Projects extends Component {
           alt={"project image"}
           name={"Portfolio Website"}
           tags={['ReactJS','Redux','Affinity']}
-          desp="I designed the personal homepage and implemented the dark & light mode features to it."
-          frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
+          desp="I designed the personal homepage and implemented the dark & light mode feature."
+          frontend="https://github.com/zhengjianliu/portfolio_website"
           backend=""
-          livedemo=""
+          livedemo="/"
           video=""
           />
         <Fade bottom duration={1000} delay={200}>
