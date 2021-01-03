@@ -76,6 +76,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 5vw;
   margin: 0;
   width: 60%;
   height: 50px;

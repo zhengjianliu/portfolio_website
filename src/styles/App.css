@@ -148,6 +148,7 @@ a {
   max-height: 100vh;
 }
 
+
 .positionbg {
   padding-left: 2vw;
   font-size: 17em;
@@ -168,11 +169,11 @@ a {
 .intro {
   font-family: georgia;
   text-align: left;
-  font-size: 2.2em;
+  font-size: 2.2vw;
   line-height: 1.3;
   position: absolute;
-  top: 15vh;
-  left: 5vw;
+  top: 20vh;
+  left: 10vw;
 }
 
 .intro h1 {
@@ -1133,7 +1134,9 @@ hr {
     font-size: 13em;
   }
   .intro {
-    top: 15vh;
+    font-size: 2.2em;
+    top: 25vh;
+    left: 5vw;
   }
   .intro h1 {
     font-size: 1em;
