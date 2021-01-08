@@ -13,19 +13,20 @@ import {connect} from 'react-redux'
 
 class App extends Component{
   state={
-    open: true,
+    close: true,
     loading:false,
     height:0,
     currentHeight:0,
-    progress:0,
+    scrollup:false,
+
   }
 
   clickHandler = () =>{
-    this.setState({open:!this.state.open})
+    this.setState({close:!this.state.close})
   }
 
   closeHandler = () =>{
-    this.setState({open:true})
+    this.setState({close:true})
   }
 
   finishloading= (percentage) =>{
@@ -49,24 +50,29 @@ class App extends Component{
     }
   }
 
-  // checkscroll = () =>{
-  //   window.addEventListener('scroll',e=>{
-  //     let height = document.body.scrollHeight
-  //     let currentHeight = window.scrollY
-  //     this.setState({height:height, currentHeight: currentHeight})
-  //     if (currentHeight>20){
-  //       this.setState({progress: parseInt(currentHeight/(height-1000)*100)})
-  //     }else if (currentHeight<20){
-  //       this.setState({progress:0})
-  //     }else if (currentHeight >90){
-  //       this.setState({progress:100})
-  //     }
-  //   })
-  // }
+  checkscroll = () =>{
+    window.addEventListener('scroll',e=>{
+      let height = document.body.scrollHeight
+      let currentHeight = window.scrollY
+      let before = this.state.currentHeight
+      this.setState({height:height, currentHeight: currentHeight})
+      let after = this.state.currentHeight
+      if(after>1500){
+        if(after>before){
+          this.setState({scrollup:true})
+        }else{
+          this.setState({scrollup:false})
+        }
+      }
+      if (currentHeight<40){
+        this.setState({close:true})
+      }
+    })
+  }
 
   componentDidMount(){
     this.checktime()
-    // this.checkscroll()
+    this.checkscroll()
   }
 
   render(){
@@ -78,12 +84,12 @@ class App extends Component{
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler}/>
           <div className="modebutton" onClick={this.nightmode}>{this.props.nightmode?"Dark On":"Dark Off"}</div>
-          <Navbar open={this.state.open} clickHandler={this.clickHandler} closeHandler={this.closeHandler} progress={this.state.progress}/>
-          <About open={this.state.open}/>
-          <Skills open={this.state.open} />
-          <Projects open={this.state.open}/>
-          <Blogs open={this.state.open}/>
-          <Contact open={this.state.open}/>
+          <Navbar close={this.state.close} clickHandler={this.clickHandler} closeHandler={this.closeHandler} scrollup={this.state.scrollup}/>
+          <About close={this.state.close}/>
+          <Skills close={this.state.close} />
+          <Projects close={this.state.close}/>
+          <Blogs close={this.state.close}/>
+          <Contact close={this.state.close}/>
           <Footer/>
         </div>
         }
