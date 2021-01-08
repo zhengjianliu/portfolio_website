@@ -17,7 +17,7 @@ class Skills extends Component{
       <div id="skills" className="fullpage">
         <div className="skillscontainer">
           <Fade bottom duration={1000} delay={200}>
-          <h1 className={this.props.open?"pagemark":"pagemark remove"}>My Skills</h1>
+          <h1 className={this.props.close?"pagemark":"pagemark remove"}>My Skills</h1>
           </Fade>
           <Skill
             topic={"A solid foundation"}

@@ -6,8 +6,7 @@ class Navbar extends Component{
   render(){
     return(
       <div className="navbarcontainer" >
-        {/* <span className="progressbar" style={{ height: `${ this.props.progress}%` }}></span> */}
-        <div id={this.props.nightmode?null:"light"} className={this.props.open?"navbar":"navbar active"}>
+        <div id={this.props.nightmode?null:"light"} className={this.props.close?(this.props.scrollup?"navbar moveup":"navbar"):"navbar active"}>
           <ul className="items" onClick={this.props.closeHandler}>
             <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>
             <li><Link activeClass="active" spy={true} to="about" smooth={true} duration={700}><b onClick={this.props.closeHandler}>About</b></Link></li>
@@ -16,7 +15,7 @@ class Navbar extends Component{
             <li><Link activeClass="active" spy={true} to="blogs" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Blogs</b></Link></li>
             <li><Link activeClass="active" spy={true} to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
           </ul>
-          <div className={this.props.open?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
+          <div className={this.props.close?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>
             <li className="line"></li>
             <li className="line"></li>
