@@ -13,7 +13,7 @@ class Home extends Component{
   render(){
     return(
       <div id="home" className="fullpage">
-        <div className="backgroundimage">
+        {/*<div className="backgroundimage">
           <span className="circle"></span>
           <span className="circle"></span>
           <span className="circle"></span>
@@ -22,7 +22,7 @@ class Home extends Component{
           <span className="circle"></span>
           <span className="circle"></span>
           <span className="circle"></span>
-        </div>
+        </div>*/}
         <div className={this.props.nightmode? "intro": "intro light"}>
           <Fade delay={200} bottom cascade>
             <div><h1>👋 Hey there!</h1></div>
