@@ -1,0 +1,71 @@
+.backgroundimage{
+  position: absolute;
+  height: 3000px;
+  width: 100%;
+  background-color: transparent;
+  overflow:hidden;
+}
+.circle{
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  top: 40vh;
+  right: 20vw;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset -20px -5px 20px rgba(124, 124, 124, 0.5);
+}
+.backgroundimage span:nth-child(1){
+  margin-top: 200px;
+  margin-right: 200px;
+  opacity: 0.15;
+  width: 400px;
+  height: 400px;
+}
+.backgroundimage span:nth-child(2){
+  margin-top: 100px;
+  margin-right: 100px;
+  opacity: 0.25;
+  width: 600px;
+  height: 600px;
+}
+.backgroundimage span:nth-child(3){
+  opacity: 0.35;
+  width: 800px;
+  height: 800px;
+}
+.backgroundimage span:nth-child(4){
+  opacity: 0.45;
+  margin-top: -100px;
+  margin-right: -100px;
+  width: 1000px;
+  height: 1000px;
+}
+.backgroundimage span:nth-child(5){
+  opacity: 0.55;
+  margin-top: -200px;
+  margin-right: -200px;
+  width: 1200px;
+  height: 1200px;
+}
+.backgroundimage span:nth-child(6){
+  opacity: 0.65;
+  margin-top: -300px;
+  margin-right: -300px;
+  width: 1400px;
+  height: 1400px;
+}
+.backgroundimage span:nth-child(7){
+  opacity: 0.75;
+  margin-top: -400px;
+  margin-right: -400px;
+  width: 1600px;
+  height: 1600px;
+}
+.backgroundimage span:nth-child(8){
+  opacity: 0.85;
+  margin-top: -500px;
+  margin-right: -500px;
+  width: 1800px;
+  height: 1800px;
+}
