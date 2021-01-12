@@ -24,7 +24,7 @@ class Contact extends Component{
             </div>
             <Fade bottom duration={1000} delay={300}>
               <div className="info">
-                <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
+                <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
                 <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
                 <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
                 <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>

@@ -25,6 +25,10 @@
   transition: .5s;
 }
 
+.navbar.moveup{
+  transform: translateY(-60px);
+}
+
 .navbar#light {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -118,9 +122,6 @@ li {
 }
 
 @media only screen and (max-width: 880px) {
-  .navbar.moveup{
-    transform: translateY(-60px);
-  }
   .info{
     width:250px !important;
   }

@@ -5,7 +5,7 @@ class Footer extends Component{
     return(
       <div id="footer">
         <p>Designed & Built by
-          <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" rel="noreferrer" target="_blank"> Zhengjian Liu</a>
+          <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" rel="noreferrer" target="_blank"> Zhengjian Liu</a>
         </p>
       </div>
     )
