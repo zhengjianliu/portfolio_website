@@ -1,6 +1,6 @@
 @import './navbar.css';
 @import './lightmode.css';
-/* @import './background.css'; */
+@import './background.css';
 
 * {
   outline: none;
@@ -41,8 +41,6 @@ a {
   -webkit-transition: 1s;
   transition: 1s;
 }
-
-
 
 
 

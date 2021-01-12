@@ -13,7 +13,7 @@ class Home extends Component{
   render(){
     return(
       <div id="home" className="fullpage">
-        {/*<div className="backgroundimage">
+        <div className="backgroundimage">
           <span className="circle"></span>
           <span className="circle"></span>
           <span className="circle"></span>
@@ -22,7 +22,7 @@ class Home extends Component{
           <span className="circle"></span>
           <span className="circle"></span>
           <span className="circle"></span>
-        </div>*/}
+        </div>
         <div className={this.props.nightmode? "intro": "intro light"}>
           <Fade delay={200} bottom cascade>
             <div><h1>👋 Hey there!</h1></div>
@@ -43,7 +43,7 @@ class Home extends Component{
             <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
             <a href="https://medium.com/@comezheng" rel="noreferrer" target="_blank"><img src={Medium} alt="Medium"/></a>
             <a href="https://github.com/zhengjianliu" rel="noreferrer" target="_blank"><img src={Github} alt="Github"/></a>
-            <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" rel="noreferrer" target="_blank"><img src={Linkedin} alt="Linkedin"/></a>
+            <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" rel="noreferrer" target="_blank"><img src={Linkedin} alt="Linkedin"/></a>
           </div>
         </div>
       </div>
