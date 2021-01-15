@@ -13,12 +13,7 @@ class Home extends Component{
   render(){
     return(
       <div id="home" className="fullpage">
-        <div className="backgroundimage">
-          <span className="circle"></span>
-          <span className="circle"></span>
-          <span className="circle"></span>
-          <span className="circle"></span>
-          <span className="circle"></span>
+        <div className={this.props.nightmode?"backgroundimage":"light backgroundimage"}>
           <span className="circle"></span>
           <span className="circle"></span>
           <span className="circle"></span>
