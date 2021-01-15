@@ -38,15 +38,15 @@ class About extends Component{
             </p>
             </Fade>
             <Fade bottom duration={1000} delay={300} cascade>
-            <div className="icons">
-              <img src={Html} alt="html icon"/>
-              <img src={Css} alt="Css icon"/>
-              <img src={Javascript} alt="Javascript icon"/>
-              <img src={Reacticon} alt="Reacticon icon"/>
-              <img src={Redux} alt="Redux icon"/>
-              <img src={Affinity} alt="Affinity icon" className="smallericon"/>
-              <img src={Rubyonrails} alt="Rubyonrails icon" className="smallericon"/>
-            </div>
+              <div className="icons">
+                <img src={Html} alt="html icon"/>
+                <img src={Css} alt="Css icon"/>
+                <img src={Javascript} alt="Javascript icon"/>
+                <img src={Reacticon} alt="Reacticon icon"/>
+                <img src={Redux} alt="Redux icon"/>
+                <img src={Affinity} alt="Affinity icon" className="smallericon"/>
+                <img src={Rubyonrails} alt="Rubyonrails icon" className="smallericon"/>
+              </div>
             </Fade>
             <Fade bottom duration={1000} delay={300} cascade>
               <div className="resumelink">

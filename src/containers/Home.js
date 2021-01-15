@@ -8,6 +8,7 @@ import Typewriter from '../components/Typewriter'
 import {connect} from 'react-redux'
 import {Link} from 'react-scroll'
 import Fade from 'react-reveal/Fade'
+import Bounce from 'react-reveal/Bounce';
 
 class Home extends Component{
   render(){
@@ -22,24 +23,26 @@ class Home extends Component{
           <Fade delay={200} bottom cascade>
             <div><h1>👋 Hey there!</h1></div>
           </Fade>
-          <Fade delay={400} bottom cascade>
+          <Fade delay={400} bottom >
             <div><h1>My name is</h1></div>
           </Fade>
-          <Fade delay={600} bottom cascade>
+          <Fade delay={600} bottom >
             <div><h1 style={{color: "#009ed9"}}>Zhengjian Liu</h1></div>
           </Fade>
             <h2>I'm <Typewriter titles={['a Full Stack Developer', 'a Problem Solver 🤔','Ready To Work With You']}/></h2>
           <Fade delay={1300} bottom>
-            <Link to="projects" smooth={true} duration={1000} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
+            <Link to="about" smooth={true} duration={1000} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
           </Fade>
         </div>
         <div className="infobox">
-          <div>
-            <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
-            <a href="https://medium.com/@comezheng" rel="noreferrer" target="_blank"><img src={Medium} alt="Medium"/></a>
-            <a href="https://github.com/zhengjianliu" rel="noreferrer" target="_blank"><img src={Github} alt="Github"/></a>
-            <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" rel="noreferrer" target="_blank"><img src={Linkedin} alt="Linkedin"/></a>
-          </div>
+          <Bounce bottom cascade duration={1000} delay={1500}>
+            <ul>
+              <li><a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a></li>
+              <li><a href="https://medium.com/@comezheng" rel="noreferrer" target="_blank"><img src={Medium} alt="Medium"/></a></li>
+              <li><a href="https://github.com/zhengjianliu" rel="noreferrer" target="_blank"><img src={Github} alt="Github"/></a></li>
+              <li><a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" rel="noreferrer" target="_blank"><img src={Linkedin} alt="Linkedin"/></a></li>
+            </ul>
+        </Bounce>
         </div>
       </div>
     )
