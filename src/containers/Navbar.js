@@ -7,7 +7,8 @@ import Nightmode from'../images/nightmodebutton.png'
 
 class Navbar extends Component{
   componentDidMount(){
-    document.addEventListener('click',e=>{
+    const navbar = document.querySelector('#navbar');
+    navbar.addEventListener('click',e=>{
       const target = e.target
       if(target.parentElement.id==="navbar" && target.id!=="modebutton"){
         this.props.closeHandler()

@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import Blog from '../components/Blog'
 import Fade from 'react-reveal/Fade';
-
+import {connect} from 'react-redux'
 class Blogs extends Component{
   state={
-    blogs:[]
+    blogs:[],
+    number:6
   }
 
   componentDidMount(){
@@ -15,8 +16,16 @@ class Blogs extends Component{
     })
   }
 
+  blogsHandler = () =>{
+    if(this.state.blogs.length>0){
+      return this.state.blogs.slice(0,this.state.number)
+    }
+  }
+  viewmoreblog = () =>{
+    this.setState({number:this.state.number+3})
+  }
   renderBlogs = () =>{
-    return this.state.blogs.map((blog, index)=>
+    return this.blogsHandler().map((blog, index)=>
     <Blog
       key={index}
       tags={blog.categories}
@@ -35,7 +44,15 @@ class Blogs extends Component{
             <div className="blogscontainer">
             <Fade bottom duration={1000} delay={50}><h1 className="pagemark">My Blogs</h1></Fade>
               {this.renderBlogs()}
+              <div className="moreblog">
+                {this.state.number>=this.state.blogs.length?
+                  null
+                  :
+                  <button onClick={this.viewmoreblog} className={this.props.nightmode?"viewmorebutton":"viewmorebutton light"}>View More</button>
+                }
+              </div>
             </div>
+
           </div>
           :
           null
@@ -45,4 +62,10 @@ class Blogs extends Component{
   }
 }
 
-export default Blogs
+const msp = state =>{
+  return{
+    nightmode: state.nightmode,
+  }
+}
+
+export default connect(msp)(Blogs)
