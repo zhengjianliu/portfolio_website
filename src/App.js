@@ -34,7 +34,7 @@ class App extends Component{
     }
   }
 
-  nightmode = () =>{
+  nightmodeswitch = () =>{
     this.props.changeMode()
   }
 
@@ -74,6 +74,7 @@ class App extends Component{
     this.checkscroll()
   }
 
+
   render(){
     return (
       <div className={this.props.nightmode?"App":"App light"}>
@@ -82,8 +83,11 @@ class App extends Component{
         :
         <div className="wholeapp">
           <Home closeHandler={this.closeHandler} nightmode={this.props.nightmode}/>
-          <div className="modebutton" onClick={this.nightmode}>{this.props.nightmode?"Dark On":"Dark Off"}</div>
-          <Navbar close={this.state.close} clickHandler={this.clickHandler} closeHandler={this.closeHandler} scrollup={this.state.scrollup}/>
+          <Navbar close={this.state.close}
+            clickHandler={this.clickHandler}
+            closeHandler={this.closeHandler}
+            scrollup={this.state.scrollup}
+            nightmodeswitch={this.nightmodeswitch}/>
           <About close={this.state.close}/>
           <Skills close={this.state.close} />
           <Projects close={this.state.close}/>
