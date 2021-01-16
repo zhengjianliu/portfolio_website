@@ -16,9 +16,8 @@
   box-shadow: inset -20px 20px 20px rgba(91, 220, 255, 0.4);
 }
 .backgroundimage.light .circle{
-  box-shadow: inset -20px 20px 30px rgba(29, 207, 255, 0.8);
+  box-shadow: inset -20px 20px 30px rgba(29, 207, 255, 0.9);
 }
-
 
 .backgroundimage span:nth-child(1){
   margin-top: 100px;
