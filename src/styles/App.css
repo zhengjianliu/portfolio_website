@@ -235,43 +235,30 @@ a {
   }
 }
 
-.infobox {
+.infobox{
   height: 100vh;
   width: 60px;
-  top: 0;
-  right: 10px;
+
   position: absolute;
-  z-index: 20;
-  animation: slidetoleft 1.5s linear;
-  animation-iteration-count: 1;
+  z-index: 1000000;
 }
 
-@keyframes slidetoleft {
-  0%{
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  70%{
-    opacity: 0;
-    transform: scaleX(0);
-  }
-  100%{
-    opacity: 1;
-    transform: scaleX(1);
-  }
-}
-
-.infobox div {
-  bottom: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  position: absolute;
+.infobox ul{
+  bottom: 30px;
+  right: 25px;
+  position: fixed;
   border-radius: 10px;
+}
+.infobox ul li{
+  height: 40px;
+  width: 40px;
+  margin: 30px 0;
 }
 
 .infobox a img {
-  margin: 15px 0;
-  width: 40px;
+  width: 100%;
 }
+
 
 .info {
   width: 350px;
@@ -354,7 +341,7 @@ a {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2vh;
+  margin-top: 10vh;
   max-width: 800px;
 }
 
@@ -1054,7 +1041,7 @@ hr {
   color: #009ed9;
   text-align: left;
   height: 50px;
-  padding-top: 70px;
+  padding-top:0;
   margin-top: 0;
   font-size: 2.5em;
   -webkit-transition: .3s;
@@ -1212,6 +1199,7 @@ hr {
   }
   .infobox {
     width: 40px;
+    display: none;
   }
   .infobox div a img {
     width: 30px;

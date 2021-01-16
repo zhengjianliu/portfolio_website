@@ -7,10 +7,10 @@ import Email from '../images/email.png'
 import {connect} from 'react-redux'
 import Arrow from '../images/arrow1.png'
 import {animateScroll as scroll} from 'react-scroll'
+
 class Contact extends Component{
   render(){
     return(
-
         <div id="contact" className="fullpage">
           <Fade bottom duration={1000} delay={100} cascade>
             <div className={this.props.nightmode?"contactcontainer":"contactcontainer light"}>
@@ -22,14 +22,14 @@ class Contact extends Component{
                 <a href="mailto:comezheng@gmail.com">Contact me</a>
               </Fade>
             </div>
-            <Fade bottom duration={1000} delay={300}>
-              <div className="info">
-                <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
-                <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
-                <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
-                <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
-              </div>
-            </Fade>
+            <div className="info">
+              <Fade bottom cascade duration={1000} delay={300}>
+                  <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
+                  <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
+                  <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
+                  <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
+              </Fade>
+            </div>
           </Fade>
             <img className="scrollup" src={Arrow} alt="scroll up" onClick={()=>scroll.scrollToTop()}/>
         </div>

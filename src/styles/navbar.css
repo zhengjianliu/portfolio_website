@@ -14,7 +14,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 50px;
+  height: 70px;
   width: 100%;
   -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
@@ -26,7 +26,7 @@
 }
 
 .navbar.moveup{
-  transform: translateY(-60px);
+  transform: translateY(-80px);
 }
 
 .navbar#light {
@@ -38,7 +38,7 @@
   padding-bottom: 5px;
 }
 
-.navbar#light .items li .active b {
+.navbar#light .items li .active b{
   color: #009ed9;
   padding-bottom: 5px;
 }
@@ -82,9 +82,9 @@
   display: flex;
   padding-left: 5vw;
   margin: 0;
-  width: 60%;
-  height: 50px;
-  padding-top: 13px;
+  width: 70%;
+  height: 30px;
+  padding-top: 20px;
   list-style-type: none;
 }
 
@@ -122,6 +122,9 @@ li {
 }
 
 @media only screen and (max-width: 880px) {
+  .navbar{
+    height: 50px;
+  }
   .info{
     width:250px !important;
   }
@@ -129,9 +132,8 @@ li {
     width: 35px;
     padding: 0 10px;
   }
-  .navbar .items li:nth-child(n+1) {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+  .navbar .items li{
+    display: none;
   }
   .items {
     width: 0px;
@@ -184,7 +186,7 @@ li {
             transform: translateY(-100%) scale(0);
     padding-left: 10vw;
   }
-  .navbar li b {
+  .navbar li b{
     -webkit-transition: 0.4s;
     transition: 0.4s;
     color: white;
@@ -206,42 +208,9 @@ li {
     -webkit-transition: .4s;
     transition: .4s;
   }
-  .navbar.active li:nth-child(1) {
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
-  .navbar.active li:nth-child(2) {
-    -webkit-transition: all 0.3s 0.05s;
-    transition: all 0.3s 0.05s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
-  .navbar.active li:nth-child(3) {
-    -webkit-transition: all 0.3s 0.1s;
-    transition: all 0.3s 0.1s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
-  .navbar.active li:nth-child(4) {
-    -webkit-transition: all 0.3s 0.15s;
-    transition: all 0.3s 0.15s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
-  .navbar.active li:nth-child(5) {
-    -webkit-transition: all 0.3s 0.2s;
-    transition: all 0.3s 0.2s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
-  .navbar.active li:nth-child(6) {
-    -webkit-transition: all 0.3s 0.25s;
-    transition: all 0.3s 0.25s;
-    -webkit-transform: translateY(0%) scale(1);
-            transform: translateY(0%) scale(1);
-  }
+
+
+
   .hamburger.active{
     transform: translateY(10px);
   }

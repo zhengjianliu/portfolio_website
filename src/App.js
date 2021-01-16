@@ -18,7 +18,6 @@ class App extends Component{
     height:0,
     currentHeight:0,
     scrollup:false,
-
   }
 
   clickHandler = () =>{
@@ -82,7 +81,7 @@ class App extends Component{
         <Loading finishloading={this.finishloading}/>
         :
         <div className="wholeapp">
-          <Home closeHandler={this.closeHandler}/>
+          <Home closeHandler={this.closeHandler} nightmode={this.props.nightmode}/>
           <div className="modebutton" onClick={this.nightmode}>{this.props.nightmode?"Dark On":"Dark Off"}</div>
           <Navbar close={this.state.close} clickHandler={this.clickHandler} closeHandler={this.closeHandler} scrollup={this.state.scrollup}/>
           <About close={this.state.close}/>
