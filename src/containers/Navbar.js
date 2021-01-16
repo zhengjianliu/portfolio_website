@@ -4,10 +4,25 @@ import { Link } from 'react-scroll'
 import Bounce from 'react-reveal/Bounce';
 
 class Navbar extends Component{
+  componentDidMount(){
+    document.addEventListener('click',e=>{
+      const target = e.target
+      if(target.parentElement.id==="navbar"){
+        this.props.closeHandler()
+      }
+    })
+  }
+
   render(){
     return(
-      <div className="navbarcontainer" >
-        <div id={this.props.nightmode?null:"light"} className={this.props.close?(this.props.scrollup?"navbar moveup":"navbar"):"navbar active"}>
+      <div id="navbar" className="navbarcontainer" >
+        <div
+          id={this.props.nightmode?null:"light"}
+          className={this.props.close
+            ?
+            (this.props.scrollup?"navbar moveup":"navbar")
+            :"navbar active"}>
+
           <Bounce left cascade duration={800}>
           <ul className="items" onClick={this.props.closeHandler}>
             <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>

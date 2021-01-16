@@ -18,7 +18,6 @@ class App extends Component{
     height:0,
     currentHeight:0,
     scrollup:false,
-
   }
 
   clickHandler = () =>{

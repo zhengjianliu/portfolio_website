@@ -31,11 +31,11 @@ class Home extends Component{
           </Fade>
             <h2>I'm <Typewriter titles={['a Full Stack Developer', 'a Problem Solver 🤔','Ready To Work With You']}/></h2>
           <Fade delay={1300} bottom>
-            <Link to="about" smooth={true} duration={1000} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
+            <Link to="about" smooth={true} duration={500} onClick={this.props.closeHandler}><img className="arrow" src={Arrow} alt="scroll down"/></Link>
           </Fade>
         </div>
         <div className="infobox">
-          <Bounce bottom cascade duration={1000} delay={1500}>
+          <Bounce bottom cascade duration={1300}>
             <ul>
               <li><a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a></li>
               <li><a href="https://medium.com/@comezheng" rel="noreferrer" target="_blank"><img src={Medium} alt="Medium"/></a></li>
