@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
 import Fade from 'react-reveal/Fade';
-import Linkedin from '../images/linkedin.png'
-import Github from '../images/github.png'
-import Medium from '../images/medium.png'
-import Email from '../images/email.png'
 import {connect} from 'react-redux'
 import Arrow from '../images/arrow1.png'
 import {animateScroll as scroll} from 'react-scroll'
+import Social from '../components/Social'
 
 class Contact extends Component{
   render(){
@@ -23,12 +20,7 @@ class Contact extends Component{
               </Fade>
             </div>
             <div className="info">
-              <Fade bottom cascade duration={1000} delay={300}>
-                  <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a>
-                  <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
-                  <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
-                  <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
-            </Fade>
+              <Social display="flex" position="absolute" iconsize="40"/>
             </div>
           </Fade>
             <img className="scrollup" src={Arrow} alt="scroll up" onClick={()=>scroll.scrollToTop()}/>

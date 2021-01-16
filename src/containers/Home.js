@@ -1,15 +1,11 @@
 import React, {Component} from 'react'
-import Linkedin from '../images/linkedin.svg'
-import Github from '../images/github.svg'
-import Medium from '../images/medium.svg'
-import Email from '../images/email.svg'
 import Arrow from '../images/arrow1.png'
 import Typewriter from '../components/Typewriter'
 import {connect} from 'react-redux'
 import {Link} from 'react-scroll'
 import Fade from 'react-reveal/Fade'
-import Bounce from 'react-reveal/Bounce';
-import ICON from '../components/ICON'
+import Social from '../components/Social'
+
 class Home extends Component{
   render(){
     return(
@@ -35,14 +31,7 @@ class Home extends Component{
           </Fade>
         </div>
         <div className="infobox">
-          <Bounce bottom cascade duration={1300}>
-            <ul>
-              <li><a href="mailto:comezheng@gmail.com"><ICON src={Email} width="40" fill="rgb(200, 23, 128)"/></a></li>
-              <li><a href="https://medium.com/@comezheng" rel="noreferrer" target="_blank"><ICON src={Medium} width="40" fill="rgb(200, 23, 128)"/></a></li>
-              <li><a href="https://github.com/zhengjianliu" rel="noreferrer" target="_blank"><ICON src={Github} width="40" fill="rgb(200, 23, 128)"/></a></li>
-              <li><a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" rel="noreferrer" target="_blank"><ICON src={Linkedin} width="40" fill="rgb(200, 23, 128)"/></a></li>
-            </ul>
-        </Bounce>
+          <Social display="block" position="fixed" iconsize="40" direction="bottom"/>
         </div>
       </div>
     )
