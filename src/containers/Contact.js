@@ -28,7 +28,7 @@ class Contact extends Component{
                   <a href="https://github.com/zhengjianliu" target="_blank" rel="noreferrer"><img src={Github} alt="Github"/></a>
                   <a href="https://medium.com/@comezheng" target="_blank" rel="noreferrer"><img src={Medium} alt="Medium"/></a>
                   <a href="mailto:comezheng@gmail.com"><img src={Email} alt="Email"/></a>
-              </Fade>
+            </Fade>
             </div>
           </Fade>
             <img className="scrollup" src={Arrow} alt="scroll up" onClick={()=>scroll.scrollToTop()}/>
