@@ -79,9 +79,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 2000px;
+  width: 100%;
+  max-width: 1200px;
   height: 50px;
   list-style-type: none;
   align-items: center;
@@ -91,9 +92,6 @@ li {
   list-style-type: none;
 }
 
-.items:first-child{
-  padding-left: 5%;
-}
 .items:not(:last-child):after{
   margin: 0 20px;
 }
