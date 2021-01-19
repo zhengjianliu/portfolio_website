@@ -92,12 +92,8 @@ li {
   list-style-type: none;
 }
 
-.items:not(:last-child):after{
-  margin: 0 20px;
-}
 .last-item {
   margin-left: auto;
-  margin-right: 3%;
 }
 
 .items li {
@@ -105,7 +101,6 @@ li {
   font-weight: 700;
   padding: 0 20px;
 }
-
 
 .items li b {
   -webkit-transition: 0.5s;
@@ -151,9 +146,8 @@ li {
   }
   .items {
     width: 0px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 0;
+    padding:0;
+    margin: 0;
   }
   .hamburger {
     display: block;
