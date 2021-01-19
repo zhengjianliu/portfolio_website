@@ -79,9 +79,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 2000px;
+  width: 100%;
+  max-width: 1200px;
   height: 50px;
   list-style-type: none;
   align-items: center;
@@ -91,15 +92,8 @@ li {
   list-style-type: none;
 }
 
-.items:first-child{
-  padding-left: 5%;
-}
-.items:not(:last-child):after{
-  margin: 0 20px;
-}
 .last-item {
   margin-left: auto;
-  margin-right: 3%;
 }
 
 .items li {
@@ -107,7 +101,6 @@ li {
   font-weight: 700;
   padding: 0 20px;
 }
-
 
 .items li b {
   -webkit-transition: 0.5s;
@@ -153,9 +146,8 @@ li {
   }
   .items {
     width: 0px;
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: 0;
+    padding:0;
+    margin: 0;
   }
   .hamburger {
     display: block;
