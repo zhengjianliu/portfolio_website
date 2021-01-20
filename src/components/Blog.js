@@ -14,7 +14,7 @@ class Blog extends Component {
   render() {
     return (
       <Fade bottom duration={1000} delay={200}>
-        <div className="blogbox">
+        <div className={this.props.nightmode?"blogbox":"blogbox light"}>
           <a href={this.props.link} target="_blank" rel="noreferrer">
             <img src={this.props.image} alt="img" rel="noreferrer"/>
           </a>
