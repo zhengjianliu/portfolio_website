@@ -15,27 +15,27 @@ class Navbar extends Component{
     })
   }
 
+  displayNavbar = () =>{
+    return <Bounce left cascade duration={800}>
+            <ul className="items">
+              <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>
+              <li><Link activeClass="active" spy={true} to="about" smooth={true} duration={700}><b onClick={this.props.closeHandler}>About</b></Link></li>
+              <li><Link activeClass="active" spy={true} to="projects" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Projects</b></Link></li>
+              <li><Link activeClass="active" spy={true} to="blogs" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Blogs</b></Link></li>
+              <li><Link activeClass="active" spy={true} to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
+              <li><a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer"><b>Resume</b></a></li>
+              <li className="last-item"><span id="modebutton" onClick={this.props.nightmodeswitch}><Modebutton /></span></li>
+            </ul>
+            </Bounce>
+  }
   render(){
     return(
       <div id="navbar" className="navbarcontainer" >
         <div
           id={this.props.nightmode?null:"light"}
-          className={this.props.close
-            ?
-            (this.props.scrollup?"navbar moveup":"navbar")
-            :"navbar active"}>
-
-          <Bounce left cascade duration={800}>
-          <ul className="items">
-            <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>
-            <li><Link activeClass="active" spy={true} to="about" smooth={true} duration={700}><b onClick={this.props.closeHandler}>About</b></Link></li>
-            <li><Link activeClass="active" spy={true} to="projects" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Projects</b></Link></li>
-            <li><Link activeClass="active" spy={true} to="blogs" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Blogs</b></Link></li>
-            <li><Link activeClass="active" spy={true} to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
-            <li><a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer"><b>Resume</b></a></li>
-            <li className="last-item"><span id="modebutton" onClick={this.props.nightmodeswitch}><Modebutton /></span></li>
-          </ul>
-          </Bounce>
+          className={this.props.close?(this.props.scrollup?"navbar moveup":"navbar"):"navbar active"}>
+          {this.props.close?this.displayNavbar():null}
+          {!this.props.close?this.displayNavbar():null}
           <div className={this.props.close?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>
             <li className="line"></li>

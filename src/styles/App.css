@@ -211,6 +211,7 @@ a {
 }
 .icon{
   transition: 300ms;
+  max-width: 40px;
 }
 .icon:hover{
   transform: translateY(-5px);
