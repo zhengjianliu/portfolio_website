@@ -52,7 +52,6 @@ class Blogs extends Component{
                 }
               </div>
             </div>
-
           </div>
           :
           null
