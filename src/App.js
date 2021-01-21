@@ -21,11 +21,11 @@ class App extends Component{
   }
 
   clickHandler = () =>{
-    this.setState({close:!this.state.close})
+    this.setState({close:!this.state.close,scrollup:false})
   }
 
   closeHandler = () =>{
-    this.setState({close:true})
+    this.setState({close:true,scrollup:false})
   }
 
   finishloading= (percentage) =>{

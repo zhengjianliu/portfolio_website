@@ -54,6 +54,62 @@
   color: #009ed9;
 }
 
+.buttonbody{
+  width: 110px;
+  border-radius: 30px;
+  height: 36px;
+  border: 2px solid white;
+  background-color: rgb(100, 100, 100);
+  font-size: 7pt;
+  font-weight: 700;
+  color:white;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.modecircle{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: inline-block;
+  transition: .5s;
+  box-shadow: inset 11px 0px 5px rgb(255, 255, 255);
+  transition: 1s;
+}
+
+.buttonbody span{
+  margin-top: 2px;
+  margin-left: 4px;
+  width: 97px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonbody span p{
+  line-height: 1.4;
+  transition: 0.5s;
+}
+
+.buttonbody.light{
+  background-color: #009ed9;
+  border: 2px solid #009ed9;
+}
+.modecircle.light{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: inline-block;
+  transform: translateX(70px) rotate(360deg);
+  box-shadow: inset 40px 10px 5px rgb(255, 255, 255);
+}
+
+.buttonbody.light span p{
+  transform: translateX(-35px);
+}
+
+
 .navbar#light .items li b:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
