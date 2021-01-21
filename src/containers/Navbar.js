@@ -25,6 +25,7 @@ class Navbar extends Component{
             (this.props.scrollup?"navbar moveup":"navbar")
             :"navbar active"}>
 
+          {!this.props.close?
           <Bounce left cascade duration={800}>
           <ul className="items">
             <li><Link activeClass="active" spy={true} to="home" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Home</b></Link></li>
@@ -36,6 +37,9 @@ class Navbar extends Component{
             <li className="last-item"><span id="modebutton" onClick={this.props.nightmodeswitch}><Modebutton /></span></li>
           </ul>
           </Bounce>
+          :
+          null
+          }
           <div className={this.props.close?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>
             <li className="line"></li>
             <li className="line"></li>

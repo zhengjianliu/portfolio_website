@@ -246,8 +246,6 @@ li {
             align-items: center;
     margin-top: 6vh;
     font-size: 2.5em;
-    -webkit-transform: translateY(-100%) scale(0);
-            transform: translateY(-100%) scale(0);
     padding-left: 10vw;
   }
   .navbar li b{
