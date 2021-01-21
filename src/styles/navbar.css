@@ -64,7 +64,7 @@
   font-weight: 700;
   color:white;
   cursor: pointer;
-  transition: 1s;
+  transition: .5s;
 }
 
 .modecircle{
@@ -101,7 +101,7 @@
   border-radius: 50%;
   background-color: transparent;
   display: inline-block;
-  transform: translateX(70px);
+  transform: translateX(70px) rotate(360deg);
   box-shadow: inset 40px 10px 5px rgb(255, 255, 255);
 }
 
