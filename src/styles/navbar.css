@@ -63,6 +63,8 @@
   font-size: 7pt;
   font-weight: 700;
   color:white;
+  cursor: pointer;
+  transition: 1s;
 }
 
 .modecircle{
@@ -71,6 +73,7 @@
   border-radius: 50%;
   background-color: white;
   display: inline-block;
+  transition: .5s;
 }
 
 .buttonbody span{
@@ -80,9 +83,29 @@
   display: flex;
   justify-content: space-between;
 }
+
 .buttonbody span p{
   line-height: 1.4;
+  transition: 0.5s;
 }
+
+.buttonbody.light{
+  background-color: #009ed9;
+  border: 2px solid #009ed9;
+}
+.modecircle.light{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+  transform: translateX(70px);
+}
+
+.buttonbody.light span p{
+  transform: translateX(-35px);
+}
+
 
 .navbar#light .items li b:hover {
   -webkit-transition: 0.2s;
