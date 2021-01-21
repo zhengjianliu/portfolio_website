@@ -74,7 +74,6 @@ class App extends Component{
     this.checkscroll()
   }
 
-
   render(){
     return (
       <div className={this.props.nightmode?"App":"App light"}>

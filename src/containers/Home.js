@@ -15,7 +15,7 @@ class Home extends Component{
           <span className="circle"></span>
           <span className="circle"></span>
         </div>
-        <div className={this.props.nightmode? "intro": "intro light"}>
+        <div className={this.props.nightmode? "intro":"intro light"}>
           <Fade delay={200} bottom cascade>
             <div><h1>👋 Hey there!</h1></div>
           </Fade>
