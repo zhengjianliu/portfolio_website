@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import Bounce from 'react-reveal/Bounce';
 import Daymode from'../images/daymodebutton.png'
 import Nightmode from'../images/nightmodebutton.png'
+import Modebutton from '../components/Modebutton'
 
 class Navbar extends Component{
   componentDidMount(){
@@ -35,6 +36,7 @@ class Navbar extends Component{
             <li><Link activeClass="active" spy={true} to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
             <li><a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer"><b>Resume</b></a></li>
             <li className="last-item"><div id="modebutton" onClick={this.props.nightmodeswitch}><img src={this.props.nightmode?Nightmode:Daymode} alt="button"/></div></li>
+            <li><Modebutton/></li>
           </ul>
           </Bounce>
           <div className={this.props.close?"hamburger":"hamburger active"} onClick={this.props.clickHandler}>

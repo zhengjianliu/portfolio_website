@@ -54,6 +54,36 @@
   color: #009ed9;
 }
 
+.buttonbody{
+  width: 110px;
+  border-radius: 30px;
+  height: 36px;
+  border: 2px solid white;
+  background-color: rgb(100, 100, 100);
+  font-size: 7pt;
+  font-weight: 700;
+  color:white;
+}
+
+.modecircle{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  display: inline-block;
+}
+
+.buttonbody span{
+  margin-top: 2px;
+  margin-left: 4px;
+  width: 97px;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonbody span p{
+  line-height: 1.4;
+}
+
 .navbar#light .items li b:hover {
   -webkit-transition: 0.2s;
   transition: 0.2s;
