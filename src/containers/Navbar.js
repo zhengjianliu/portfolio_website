@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import { Link } from 'react-scroll'
 import Bounce from 'react-reveal/Bounce';
-import Daymode from'../images/daymodebutton.png'
-import Nightmode from'../images/nightmodebutton.png'
 import Modebutton from '../components/Modebutton'
 
 class Navbar extends Component{

@@ -71,9 +71,11 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: white;
+  background-color: transparent;
   display: inline-block;
   transition: .5s;
+  box-shadow: inset 11px 0px 5px rgb(255, 255, 255);
+  transition: 1s;
 }
 
 .buttonbody span{
@@ -97,9 +99,10 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: white;
+  background-color: transparent;
   display: inline-block;
   transform: translateX(70px);
+  box-shadow: inset 40px 10px 5px rgb(255, 255, 255);
 }
 
 .buttonbody.light span p{
