@@ -26,7 +26,23 @@
 }
 
 .navbar.moveup{
-  transform: translateY(-60px);
+  transform: translateY(-49px);
+}
+
+.progressbar{
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  height: 3px;
+  z-index: 100;
+  border-radius: 20px;
+  background-color: rgb(0, 158, 217);
+  z-index: 10000;
+  transition: .5s;
+}
+
+.progressbar.active{
+  top: 0;
 }
 
 .navbar#light {

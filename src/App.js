@@ -18,6 +18,7 @@ class App extends Component{
     height:0,
     currentHeight:0,
     scrollup:false,
+    progress:0,
   }
 
   clickHandler = () =>{
@@ -55,6 +56,10 @@ class App extends Component{
       let currentHeight = window.scrollY
       let before = this.state.currentHeight
       this.setState({height:height, currentHeight: currentHeight})
+      this.setState({progress: parseInt(currentHeight/(height-1000)*100)})
+      if(this.state.progress>97){
+        this.setState({progress:100})
+      }
       let after = this.state.currentHeight
       if(after>1500){
         if(after>before){
@@ -75,6 +80,7 @@ class App extends Component{
   }
 
   render(){
+    console.log(this.state.progress)
     return (
       <div className={this.props.nightmode?"App":"App light"}>
         {!this.state.loading?
@@ -86,6 +92,7 @@ class App extends Component{
             clickHandler={this.clickHandler}
             closeHandler={this.closeHandler}
             scrollup={this.state.scrollup}
+            progress={this.state.progress}
             nightmodeswitch={this.nightmodeswitch}/>
           <About close={this.state.close}/>
           <Skills close={this.state.close} />
