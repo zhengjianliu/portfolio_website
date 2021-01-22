@@ -28,6 +28,7 @@ class Navbar extends Component{
             </ul>
             </Bounce>
   }
+
   render(){
     return(
       <div id="navbar" className="navbarcontainer" >
@@ -41,8 +42,9 @@ class Navbar extends Component{
             <li className="line"></li>
             <li className="line"></li>
           </div>
-
+          <div className={this.props.close?"progressbar":"progressbar active"} style={{width:`${this.props.progress}%`}}></div>
         </div>
+        
       </div>
     )
   }
