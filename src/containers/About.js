@@ -8,6 +8,7 @@ import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
 import Fade from 'react-reveal/Fade'
 import {connect} from 'react-redux'
+import Resume from '../resume/ZHENGJIANLIU_RESUME.pdf'
 
 class About extends Component{
   render(){
@@ -20,19 +21,17 @@ class About extends Component{
             <Fade bottom duration={1000} delay={100}>
               <p>
               <b>Hi, my name is Zhengjian Liu,
-              <br/> a software Engineer (Full stack web developer) with a passion to build exceptional websites,
-              applications or anything in between.</b>
+              <br/> a software engineer experienced in Ruby on Rails, React, and Javascript 
+              based programming with a background in Computer Information Systems.</b>
               </p>
               </Fade>
               <Fade bottom duration={1000} delay={150}>
               <p>
               <br/>
+              Possess a solid foundation of web development and the ability to conceptualize solutions 
+              to complex problems. I take pride in being a hands-on and driven engineering team member 
+              who prototypes quickly and can arouse the passion of team members for innovation.
               <br/>
-              With experience in Ruby on Rails, JavaScript, and React
-              and a Background in Computer Information System, I discovered web development through
-              accumulation of experience and feedback from colleagues. I take pride in being a
-              hands-on and driven engineering team member who prototypes quickly
-              and can arouse the passion of team members for innovation.<br/>
               <br/>
               Here are a few technologies I've been working with recently:<br/>
             </p>
@@ -51,7 +50,7 @@ class About extends Component{
             <Fade bottom duration={1000} delay={300} cascade>
               <div className="resumelink">
                 <div>
-                  <a href="https://docs.google.com/document/d/1yjKZIodyngLcENDMbB2YUz-SPTznlJJFHwof2R4XVjc/edit?usp=sharing" target="_blank" rel="noreferrer">View Resume</a>
+                  <a href={Resume} target="_blank" rel="noreferrer">View Resume</a>
                   <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer">Go to Linkedin</a>
                 </div>
               </div>

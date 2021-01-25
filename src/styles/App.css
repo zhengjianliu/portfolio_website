@@ -619,6 +619,168 @@ a {
   color: white;
 }
 
+
+
+
+
+
+
+/*video player*/
+
+
+.videocontainer{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  
+  overflow: hidden;
+  transition: .2s;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+iframe{
+  margin-top: 5vh;
+  width: 1200px;
+  height: 60vh;
+  transition: .2s;
+  border-radius: 20px;
+}
+
+.videocontainer.small{
+  width: 350px;
+  height: 180px;
+  bottom:10px;
+  left:10px;
+  border-radius: 20px;
+}
+
+.videocontainer.small:hover{
+  width: 350px;
+  height: 250px;
+}
+
+.small iframe{
+  margin: 0;
+  width: 350px;
+  height: 190px;
+  opacity:0.7;
+}
+
+.small iframe:hover{
+  width: 350px;
+  height: 190px;
+  opacity:1;
+}
+
+.small .videoinfo{
+  display: none;
+}
+
+.videoinfo{
+  text-align: left;
+  width: 1200px;
+  margin:0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.videolinks{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.videolinks a{
+  color: white;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  font-size: 18pt;
+}
+
+.videoinfo div p{
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 18pt;
+  font-weight: 700;
+}
+
+.videoactions{
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small .videoactions{
+  margin-top: 1px;
+}
+
+.small .videoactions{
+  width: 150px;
+}
+.close{
+  list-style-type: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover{
+  transform: scale(1.05);
+}
+
+.close li:first-child{
+  height: 5px;
+  width: 40px;
+  background-color: white;
+  transform: translate(5px,22px) rotate(45deg);
+  border-radius: 20px;
+}
+
+.close li:last-child{
+  height: 5px;
+  width: 40px;
+  background-color: white;
+  transform: translate(5px,17px) rotate(135deg);
+  border-radius: 20px;
+}
+.miniwindow{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: skyblue;
+  cursor: pointer;
+  transition:0.3s;
+}
+.miniwindow:hover{
+  transform: scale(1.05);
+}
+
+.miniwindow div:first-child{
+  width: 20px;
+  height: 10px;
+  border:2px solid black;
+  transform: translate(5px,25px);
+}
+.miniwindow div:last-child{
+  width: 30px;
+  height: 20px;
+  border:2px dotted white;
+  transform: translate(10px,-5px);
+}
+
+
 @media only screen and (max-width: 880px) {
   .projectcontainer {
     width: 95%;

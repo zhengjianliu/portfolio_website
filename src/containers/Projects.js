@@ -6,9 +6,15 @@ import Bestbey from '../images/bestbey.jpg'
 import Youplay from '../images/youplay.jpg'
 import Porfolio from '../images/portfolio.jpg'
 import {connect} from 'react-redux'
+import Videoplayer from './Videoplayer'
 
 class Projects extends Component {
-
+  state={
+    openvideo:false,
+  }
+  playVideo = () =>{
+    this.setState({openvideo:!this.state.openvideo})
+  }
   render() {
     return (
       <div id="projects" className="fullpage">
@@ -24,6 +30,7 @@ class Projects extends Component {
           backend="https://github.com/zhengjianliu/ziptrade-backend"
           livedemo="https://ziptrade.netlify.app"
           video="https://youtu.be/woQ9vWkBT3w"
+          // playVideo={this.playVideo}
           />
         <Project
           image={Bestbey}
@@ -63,7 +70,9 @@ class Projects extends Component {
             <button className={this.props.nightmode?"viewmorebutton":"viewmorebutton light"}>View More</button>
           </a>
         </Fade>
+        
       </div>
+      {this.state.openvideo?<Videoplayer/>:null}
     </div>
     )
   }
