@@ -24,7 +24,7 @@ class Navbar extends Component{
                 <li><Link activeClass="active" spy={true} to="projects" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Projects</b></Link></li>
                 <li><Link activeClass="active" spy={true} to="blogs" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Blogs</b></Link></li>
                 <li><Link activeClass="active" spy={true} to="contact" smooth={true} duration={700}><b onClick={this.props.closeHandler}>Contact</b></Link></li>
-                <li><a href={Resume} target="_blank"><b>Resume</b></a></li>
+                <li><a href={Resume} target="_blank" rel="noreferrer"><b>Resume</b></a></li>
                 <li className="last-item"><span id="modebutton" onClick={this.props.nightmodeswitch}><Modebutton /></span></li>
               </ul>
             </Bounce>

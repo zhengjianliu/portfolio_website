@@ -50,7 +50,7 @@ class About extends Component{
             <Fade bottom duration={1000} delay={300} cascade>
               <div className="resumelink">
                 <div>
-                  <a href={Resume} target="_blank">View Resume</a>
+                  <a href={Resume} target="_blank" rel="noreferrer">View Resume</a>
                   <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer">Go to Linkedin</a>
                 </div>
               </div>
