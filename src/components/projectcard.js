@@ -24,9 +24,9 @@ class ProjectCard extends Component {
       <Fade bottom delay={200} duration={1000} cascade>
         <div className="projectbox">
           <div className={this.props.nightmode?"projectboxleft": "projectboxleft light"} onClick={this.props.playVideo} >
-            {/* <a href={this.props.livedemo} target="_blank" rel="noreferrer"> */}
+            <a href={this.props.livedemo} target="_blank" rel="noreferrer">
               <img src={this.props.image} alt={this.props.name} />
-            {/* </a> */}
+            </a>
           </div>
           <div className={this.props.nightmode?"projectboxright": "projectboxright light"}>
             <h2>{this.props.name}</h2>
