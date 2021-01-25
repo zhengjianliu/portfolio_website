@@ -80,7 +80,6 @@ class App extends Component{
   }
 
   render(){
-    console.log(this.state.progress)
     return (
       <div className={this.props.nightmode?"App":"App light"}>
         {!this.state.loading?
