@@ -45,7 +45,6 @@ class Navbar extends Component{
           </div>
           <div className={this.props.close?"progressbar":"progressbar active"} style={{width:`${this.props.progress}%`}}></div>
         </div>
-        
       </div>
     )
   }
