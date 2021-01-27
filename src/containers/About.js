@@ -51,7 +51,7 @@ class About extends Component{
               <div className="resumelink">
                 <div>
                   <a href={Resume} target="_blank" rel="noreferrer">View Resume</a>
-                  <a href="https://www.Linkedin.com/in/zhengjian-liu-33776553" target="_blank" rel="noreferrer">Go to Linkedin</a>
+                  <a href="https://www.linkedin.com/in/zhengjian-jay-liu-33776553/" target="_blank" rel="noreferrer">Go to Linkedin</a>
                 </div>
               </div>
             </Fade>
