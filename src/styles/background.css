@@ -1,6 +1,7 @@
 .backgroundimage{
   position: absolute;
-  height: 110vh;
+  min-height: 1000px;
+  height: 100vh;
   width: 100%;
   background-color: transparent;
   overflow:hidden;
