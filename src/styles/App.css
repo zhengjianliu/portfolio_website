@@ -41,11 +41,14 @@ a {
   transition: 1s;
 }
 
+
 .fullpage {
   width: 100%;
   height: auto;
   min-height: 60vh;
+  overflow: hidden;
 }
+
 
 #loading {
   height: 100vh;
@@ -59,6 +62,8 @@ a {
 #loading.done {
   opacity: 0;
 }
+
+
 
 #loading h1 {
   color: black;
