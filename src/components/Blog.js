@@ -16,7 +16,10 @@ class Blog extends Component {
       <Fade bottom duration={1000} delay={200}>
         <div className={this.props.nightmode?"blogbox":"blogbox light"}>
           <a href={this.props.link} target="_blank" rel="noreferrer">
-            <img src={this.props.image} alt="img" rel="noreferrer"/>
+            <div className="blogcontainer">
+              <img src={this.props.image} alt="img" rel="noreferrer"/>
+              <p>{this.props.pubDate}</p>
+            </div>
           </a>
           <div className={this.props.nightmode?"blog":"blog light"}>
             <b>{this.props.name}</b>

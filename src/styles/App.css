@@ -1007,11 +1007,7 @@ iframe{
   transition: 0.5s;
 }
 
-.blogbox img:hover{
-  filter: brightness(1);
-  transform: translateY(-5px);
 
-}
 .blog {
   text-align: left;
 }
@@ -1055,6 +1051,31 @@ iframe{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.blogbox a div p {
+  position: absolute;
+  margin: 0;
+  background-color: #009ed9;
+  padding:4.5px 8px;
+  font-weight: bold;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 10px;
+  transform: translateY(-40px);
+}
+
+.blogcontainer{
+  transition: .5s;
+}
+
+.blogcontainer:hover{
+  transform: translateY(-5px);
+}
+
+.blogcontainer:hover img{
+  filter: brightness(1);
 }
 
 
@@ -1311,9 +1332,6 @@ hr {
     display: block;
     height: auto;
   }
-  .blogbox a img {
-    height: 200px;
-  }
   .blog b {
     font-size: 1.4em;
   }
@@ -1350,6 +1368,10 @@ hr {
   .blogbox {
     width: 100%;
     margin-bottom: 5%;
+  }
+
+  .blogbox a div img {
+    height: 200px;
   }
   .viewmorebutton {
     padding: 5px 20px;

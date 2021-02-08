@@ -32,6 +32,7 @@ class Blogs extends Component{
       name={blog.title}
       image={blog.thumbnail}
       link={blog.link}
+      pubDate={blog.pubDate.split(' ')[0]}
       />)
   }
 
