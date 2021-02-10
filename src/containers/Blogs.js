@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Blog from '../components/Blog'
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 import {connect} from 'react-redux'
 class Blogs extends Component{
   state={
@@ -43,7 +43,7 @@ class Blogs extends Component{
           ?
           <div id="blogs" className="fullpage">
             <div className="blogscontainer">
-            <Fade bottom duration={1000} delay={50}><h1 className="pagemark">My Blogs</h1></Fade>
+            <Slide left duration={700}><h1 className="pagemark">My Blogs</h1></Slide>
               {this.renderBlogs()}
               <div className="moreblog">
                 {this.state.number>=this.state.blogs.length?

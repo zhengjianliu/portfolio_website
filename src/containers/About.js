@@ -7,6 +7,7 @@ import Rubyonrails from '../images/rubyonrails.png'
 import Affinity from '../images/affinity.png'
 import Css from '../images/css.png'
 import Fade from 'react-reveal/Fade'
+import Slide from 'react-reveal/Slide'
 import {connect} from 'react-redux'
 import Resume from '../resume/ZHENGJIANLIU_RESUME.pdf'
 
@@ -17,7 +18,7 @@ class About extends Component{
 
         <div className="aboutcontainer">
           <div className={this.props.nightmode?"aboutleft":"aboutleft light"}>
-          <Fade bottom duration={1000} delay={50}><h1 className="pagemark">About Me</h1></Fade>
+          <Slide left duration={700}><h1 className="pagemark">About Me</h1></Slide>
             <Fade bottom duration={1000} delay={100}>
               <p>
               <b>Hi, my name is Zhengjian Liu,

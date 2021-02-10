@@ -6,6 +6,7 @@ import Bestbey from '../images/bestbey.jpg'
 import Youplay from '../images/youplay.jpg'
 import Porfolio from '../images/portfolio.jpg'
 import {connect} from 'react-redux'
+import Slide from 'react-reveal/Slide';
 
 class Projects extends Component {
   state={
@@ -18,7 +19,7 @@ class Projects extends Component {
     return (
       <div id="projects" className="fullpage">
       <div className="projectcontainer">
-      <Fade bottom duration={1000} delay={50}><h1 className="pagemark">My Projects</h1></Fade>
+      <Slide left duration={700}><h1 className="pagemark">My Projects</h1></Slide>
         <Project
           image={Ziptrade}
           alt={"project image"}
