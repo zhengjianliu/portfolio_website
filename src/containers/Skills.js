@@ -26,7 +26,7 @@ class Skills extends Component{
           <Skill
             topic={"Front End Development"}
             icons={[Reacticon,Redux]}
-            desp={"I use react for front-end development, and use redux to handle states. I ensure the reliability of my code, and at the same time make sure my code is dry by creating reusable compoenents."}/>
+            desp={"I use react for front-end development, and use redux to handle states. I ensure the reliability of my code, and at the same time make sure my code is dry by creating reusable components."}/>
           <Skill
             topic={"Back End Development"}
             icons={[Rubyonrails]}
@@ -34,11 +34,11 @@ class Skills extends Component{
           <Skill
             topic={"Version Control"}
             icons={[Github]}
-            desp={"I use Github in nearly every single of my project for version control. Also, I familiar with using terminal interface for github."}/>
+            desp={"I use Github in nearly every single of my project for version control, and familiar with using terminal interface for github."}/>
           <Skill
             topic={"Design Tool"}
             icons={[Affinity,Affinityphoto]}
-            desp={"I use affinity designer tools to design and produce front-end icons and backgrounds...etc. Also, optimize visual apperance of the software and the user experience."}/>
+            desp={"I use affinity designer tools to design and produce front-end icons and backgrounds...etc. Also, optimize visual appearance of the software and the user experience."}/>
         </div>
       </div>
     )
