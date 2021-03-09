@@ -25,7 +25,7 @@ class Projects extends Component {
           alt={"project image"}
           name={"Zip Trade"}
           tags={['ReactJS','Redux','ROR',]}
-          desp="The second-hand marketing app provides a connection for sellers and buyers living in the same postal area."
+          desp="An local marketing web application that provides a connection for local community."
           frontend="https://github.com/zhengjianliu/ziptrade-frontend"
           backend="https://github.com/zhengjianliu/ziptrade-backend"
           livedemo="https://ziptrade.netlify.app"
@@ -36,7 +36,7 @@ class Projects extends Component {
           alt={"project image"}
           name={"BestBey"}
           tags={['ReactJS','Redux','ROR']}
-          desp="Bestbey is an eCommerce store that brings you superior quality in electronics."
+          desp="An electronic e-commerce websites that allows user to place order and search eletronic products."
           frontend="https://github.com/zhengjianliu/bestbey"
           backend="https://github.com/zhengjianliu/bestbey-back"
           livedemo="https://bestbey.netlify.app"
@@ -47,7 +47,7 @@ class Projects extends Component {
           alt={"project image"}
           name={"YouPlay"}
           tags={['ROR','Affinity']}
-          desp="Ruby on Rails full stack application that allows users to search, view, comment on videos online"
+          desp="An Ruby on Rails full stack application that allows users to search, view, comment on videos online"
           frontend="https://github.com/zhengjianliu/YouPlay/tree/master/app/views"
           backend="https://github.com/zhengjianliu/YouPlay"
           livedemo="https://you-play-heroku.herokuapp.com"
@@ -58,7 +58,7 @@ class Projects extends Component {
           alt={"project image"}
           name={"Portfolio Website"}
           tags={['ReactJS','Redux','Affinity']}
-          desp="I designed the personal homepage and implemented the dark & light mode feature."
+          desp="My portfolio website that implemented the dark & light mode feature."
           frontend="https://github.com/zhengjianliu/portfolio_website"
           backend=""
           livedemo="/"
